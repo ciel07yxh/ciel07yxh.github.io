@@ -1,35 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ config.language }}">
 <head>
 <meta charset="utf-8">
-<title>面试题15-链表中倒数第k个结点 - Ciel's blog</title>
-<base href="/">
+<title>{{ title }}</title>
+<base href="{{ config.root }}">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="http://ciel07yxh.top/2020/03/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%9D%A2%E8%AF%95%E9%A2%9815-%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9/">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-<meta name="description" content="题目输入一个链表，输出该链表中倒数第k个结点。 解题本题可以先遍历链表计数节点个数n，然后让指针从头开始移动n-(k-1)个结点则找到了倒数第k个结点。但是更漂亮的办法是用两个指针，只遍历链表一次： 12345678910111213141516171819202122232425262728293031&#x2F;*public class ListNode &amp;#123;    int val;    L">
-<meta property="og:type" content="website">
-<meta property="og:title" content="面试题15-链表中倒数第k个结点">
-<meta property="og:url" content="http://ciel07yxh.top/2020/03/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%9D%A2%E8%AF%95%E9%A2%9815-%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9/index.html">
-<meta property="og:site_name" content="Ciel&#39;s blog">
-<meta property="og:description" content="题目输入一个链表，输出该链表中倒数第k个结点。 解题本题可以先遍历链表计数节点个数n，然后让指针从头开始移动n-(k-1)个结点则找到了倒数第k个结点。但是更漂亮的办法是用两个指针，只遍历链表一次： 12345678910111213141516171819202122232425262728293031&#x2F;*public class ListNode &amp;#123;    int val;    L">
-<meta property="og:locale">
-<meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=160">
-<meta property="article:published_time" content="2020-03-16T08:53:27.000Z">
-<meta property="article:modified_time" content="2020-11-19T07:36:17.978Z">
-<meta property="article:author" content="ciel">
-<meta property="article:tag" content="刷题笔记">
-<meta property="article:tag" content="链表">
-<meta property="article:tag" content="剑指offer">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=160">
-
-
-<!-- hexo injector head_end start --><link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet"><link href="/styles.43478ea7e28ed563c48b.css" rel="stylesheet">
-<script src="/config.d8779d05e4944aca22f4.js"></script>
-
-<link rel="stylesheet" href="/theme.9a110498fb03f1829589.css" is="theme">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.2.0"></head>
-<body lang="en"><!-- hexo injector body_begin start --><is-a></is-a><!-- hexo injector body_begin end --><!-- hexo injector body_end start --><script src="/runtime.b15aa7186c559b492b7d.js"></script><script src="/polyfills.824ff89b5f3ca4543a31.js"></script><script src="/main.03652fc423a687c817e8.js"></script><!-- hexo injector body_end end --></body>
+<link rel="canonical" href="{{ url_trim(url) }}">
+<link rel="icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}">
+{% if theme.pwa.manifest %}
+<link rel="manifest" href="{{ url_for('manifest.json') }}">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+{% endif %}
+{{ open_graph({ image: page.thumbnail || theme.profile.avatar }) | safe }}
+{% if theme.seo.structured_data %}
+{{ structured_data(page) | safe }}
+{% endif %}
+{% if config.feed and config.feed.path %}
+<link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ url_for(config.feed.path) }}">
+{% endif %}
+{{ theme.styles | safe }}
+{{ css('theme.' + theme.runtime.themeHash) | safe }}
+{{ js('config.' + theme.runtime.configHash) | safe }}
+{% if theme.ga %}
+{{ ga(theme.ga) | safe }}
+{% endif %}
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body lang="{{ config.language }}">
+<{{ theme.runtime.selector }}></{{ theme.runtime.selector }}>
+{{ theme.scripts | safe }}
+</body>
 </html>
