@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>在Dockerfile中安装mysqlclient - Ciel's blog</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="http://ciel07yxh.top/2020/03/12/Docker/%E5%9C%A8Dockerfile%E4%B8%AD%E5%AE%89%E8%A3%85mysqlclient/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<meta name="description" content="mysqlclient这个包安装经常出问题，在docker环境构建的时候同样出现了问题。 尝试了一般的方法，到https:&#x2F;&#x2F;www.lfd.uci.edu&#x2F;~gohlke&#x2F;pythonlibs&#x2F;#mysqlclient手动下载whl文件，放入docker，手动通过RUN pip install mysqlclient‑xxx.whl指令安装，结果无论什么版本都提示不支持，放弃。 后面通过在Doc">
+<meta property="og:type" content="website">
+<meta property="og:title" content="在Dockerfile中安装mysqlclient">
+<meta property="og:url" content="http://ciel07yxh.top/2020/03/12/Docker/%E5%9C%A8Dockerfile%E4%B8%AD%E5%AE%89%E8%A3%85mysqlclient/index.html">
+<meta property="og:site_name" content="Ciel&#39;s blog">
+<meta property="og:description" content="mysqlclient这个包安装经常出问题，在docker环境构建的时候同样出现了问题。 尝试了一般的方法，到https:&#x2F;&#x2F;www.lfd.uci.edu&#x2F;~gohlke&#x2F;pythonlibs&#x2F;#mysqlclient手动下载whl文件，放入docker，手动通过RUN pip install mysqlclient‑xxx.whl指令安装，结果无论什么版本都提示不支持，放弃。 后面通过在Doc">
+<meta property="og:locale">
+<meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=160">
+<meta property="article:published_time" content="2020-03-12T08:12:20.000Z">
+<meta property="article:modified_time" content="2020-11-19T07:36:17.955Z">
+<meta property="article:author" content="ciel">
+<meta property="article:tag" content="mysql">
+<meta property="article:tag" content="mysqlclient">
+<meta property="article:tag" content="apt-get install 交互">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=160">
+
+
+<!-- hexo injector head_end start --><link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet"><link href="/styles.43478ea7e28ed563c48b.css" rel="stylesheet">
+<script src="/config.d8779d05e4944aca22f4.js"></script>
+
+<link rel="stylesheet" href="/theme.9a110498fb03f1829589.css" is="theme">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.2.0"></head>
+<body lang="en"><!-- hexo injector body_begin start --><is-a></is-a><!-- hexo injector body_begin end --><!-- hexo injector body_end start --><script src="/runtime.b15aa7186c559b492b7d.js"></script><script src="/polyfills.824ff89b5f3ca4543a31.js"></script><script src="/main.03652fc423a687c817e8.js"></script><!-- hexo injector body_end end --></body>
+</html>
