@@ -242,7 +242,35 @@
 
   
   <url>
-    <loc>http://ciel07yxh.top/tags/%E6%95%99%E7%A8%8B/</loc>
+    <loc>http://ciel07yxh.top/tags/mysql/</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ciel07yxh.top/tags/django/</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ciel07yxh.top/tags/%E8%B8%A9%E5%9D%91/</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ciel07yxh.top/tags/mysqlclient/</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ciel07yxh.top/tags/apt-get-install-%E4%BA%A4%E4%BA%92/</loc>
     <lastmod>2024-01-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -270,21 +298,7 @@
   </url>
   
   <url>
-    <loc>http://ciel07yxh.top/tags/mysql/</loc>
-    <lastmod>2024-01-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ciel07yxh.top/tags/django/</loc>
-    <lastmod>2024-01-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ciel07yxh.top/tags/%E8%B8%A9%E5%9D%91/</loc>
+    <loc>http://ciel07yxh.top/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2024-01-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -292,20 +306,6 @@
   
   <url>
     <loc>http://ciel07yxh.top/tags/tips/</loc>
-    <lastmod>2024-01-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ciel07yxh.top/tags/mysqlclient/</loc>
-    <lastmod>2024-01-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ciel07yxh.top/tags/apt-get-install-%E4%BA%A4%E4%BA%92/</loc>
     <lastmod>2024-01-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -410,13 +410,6 @@
   </url>
   
   <url>
-    <loc>http://ciel07yxh.top/tags/%E6%95%B0%E7%BB%84/</loc>
-    <lastmod>2024-01-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ciel07yxh.top/tags/%E6%A0%88/</loc>
     <lastmod>2024-01-27</lastmod>
     <changefreq>daily</changefreq>
@@ -438,6 +431,13 @@
   </url>
   
   <url>
+    <loc>http://ciel07yxh.top/tags/%E6%95%B0%E7%BB%84/</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://ciel07yxh.top/tags/%E9%98%9F%E5%88%97/</loc>
     <lastmod>2024-01-27</lastmod>
     <changefreq>daily</changefreq>
@@ -447,14 +447,14 @@
 
   
   <url>
-    <loc>http://ciel07yxh.top/categories/Azure/</loc>
+    <loc>http://ciel07yxh.top/categories/Docker/</loc>
     <lastmod>2024-01-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ciel07yxh.top/categories/NS3/</loc>
+    <loc>http://ciel07yxh.top/categories/Azure/</loc>
     <lastmod>2024-01-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -468,14 +468,14 @@
   </url>
   
   <url>
-    <loc>http://ciel07yxh.top/categories/Azure/Azure-Kubenetes-Service/</loc>
+    <loc>http://ciel07yxh.top/categories/NS3/</loc>
     <lastmod>2024-01-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ciel07yxh.top/categories/Docker/</loc>
+    <loc>http://ciel07yxh.top/categories/Azure/Azure-Kubenetes-Service/</loc>
     <lastmod>2024-01-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -496,13 +496,6 @@
   </url>
   
   <url>
-    <loc>http://ciel07yxh.top/categories/Azure/Azure-Kubenetes-Service/Azure-key-vault/</loc>
-    <lastmod>2024-01-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ciel07yxh.top/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2024-01-27</lastmod>
     <changefreq>daily</changefreq>
@@ -511,6 +504,13 @@
   
   <url>
     <loc>http://ciel07yxh.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2024-01-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ciel07yxh.top/categories/Azure/Azure-Kubenetes-Service/Azure-key-vault/</loc>
     <lastmod>2024-01-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
