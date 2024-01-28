@@ -115,18 +115,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-count">31</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -143,6 +143,117 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ciel07yxh.top/2020/03/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%9D%A2%E8%AF%95%E9%A2%984-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ciel">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ciel's blog">
+      <meta itemprop="description" content="在这里记录我的学习 grit！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Ciel's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/03/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%9D%A2%E8%AF%95%E9%A2%984-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/" class="post-title-link" itemprop="url">面试题4 - 替换空格</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-03-03 17:08:23" itemprop="dateCreated datePublished" datetime="2020-03-03T17:08:23+08:00">2020-03-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-01-27 12:43:30" itemprop="dateModified" datetime="2024-01-27T12:43:30+08:00">2024-01-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。</p>
+<h2 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h2><h3 id="调用自带函数"><a href="#调用自带函数" class="headerlink" title="调用自带函数"></a>调用自带函数</h3><p><code>StringBuffer</code>的<code>replace</code>函数与<code>String</code>的不同，所以需要先将<code>StringBuffer</code>转化为<code>String</code>。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">replaceSpace</span><span class="params">(StringBuffer str)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 注意这里toString和String的replace方法都会生成重新String</span></span><br><span class="line">        <span class="keyword">return</span> str.toString().replace(<span class="string">&quot; &quot;</span>, <span class="string">&quot;%20&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建新的数组存"><a href="#创建新的数组存" class="headerlink" title="创建新的数组存"></a>创建新的数组存</h3><p>当遇到 “ “，就追加 “%20”，否则遇到什么追加什么</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">replaceSpace</span><span class="params">(StringBuffer str)</span> </span>&#123;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;str.length();i++)&#123;</span><br><span class="line">            <span class="keyword">char</span> c = str.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(c == <span class="string">&#x27; &#x27;</span>)&#123;</span><br><span class="line">                sb.append(<span class="string">&quot;%20&quot;</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                sb.append(c);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="在原来字符串上替换"><a href="#在原来字符串上替换" class="headerlink" title="在原来字符串上替换"></a>在原来字符串上替换</h3><p>先计算出空格数量，即为要拓展的字符数量。</p>
+<p>然后遍历字符串，当遇到空格时替换。（使用从后向前替换的方法，这样移动的字符数要少一些。）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">replaceSpace</span><span class="params">(StringBuffer str)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> spacenum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;str.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(str.charAt(i)==<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">                spacenum++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> indexold = str.length()-<span class="number">1</span>; </span><br><span class="line">        <span class="keyword">int</span> newlength = str.length() + spacenum*<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> indexnew = newlength-<span class="number">1</span>;</span><br><span class="line">        str.setLength(newlength);</span><br><span class="line">        <span class="keyword">for</span>(;indexold&gt;=<span class="number">0</span>;indexold--)&#123; </span><br><span class="line">            <span class="comment">// 已经替换所有空格后，退出循环</span></span><br><span class="line">            <span class="keyword">if</span> (spacenum==<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(str.charAt(indexold) == <span class="string">&#x27; &#x27;</span>)&#123;  </span><br><span class="line">                str.setCharAt(indexnew--, <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">                str.setCharAt(indexnew--, <span class="string">&#x27;2&#x27;</span>);</span><br><span class="line">                str.setCharAt(indexnew--, <span class="string">&#x27;%&#x27;</span>);</span><br><span class="line">                spacenum--;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                str.setCharAt(indexnew--, str.charAt(indexold));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> str.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li><code>String</code>, <code>StringBuilder</code>&amp;<code>StringBuffer</code></li>
+</ol>
+<p>当对字符串进行修改的时候，需要使用 StringBuffer 和 StringBuilder 类。</p>
+<p>和 String 类不同的是，StringBuffer 和 StringBuilder 类的对象能够被多次的修改，并且不产生新的未使用对象，返回的是缓存区本身。</p>
+<p>StringBuilder 类在 Java 5 中被提出，它和 StringBuffer 之间的最大不同在于 StringBuilder 的方法不是线程安全的（不能同步访问）。</p>
+<p>由于 StringBuilder 相较于 StringBuffer 有速度优势，所以多数情况下建议使用 StringBuilder 类。然而在应用程序要求线程安全的情况下，则必须使用 StringBuffer 类。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// StringBuffer:</span></span><br><span class="line"><span class="comment">// 使用给定 String 中的字符替换此序列的子字符串中的字符。</span></span><br><span class="line">replace(<span class="keyword">int</span> start, <span class="keyword">int</span> end, String str)</span><br><span class="line"><span class="comment">// 返回此序列中数据的字符串表示形式。</span></span><br><span class="line"><span class="function">String <span class="title">toString</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="comment">// 返回指定索引处的 char 值。</span></span></span><br><span class="line"><span class="function"><span class="keyword">char</span> <span class="title">charAt</span><span class="params">(<span class="keyword">int</span> index)</span></span></span><br><span class="line"><span class="function"><span class="comment">// 设置字符序列的长度。</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setLength</span><span class="params">(<span class="keyword">int</span> newLength)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">    </span></span><br><span class="line"><span class="function"><span class="comment">// String:</span></span></span><br><span class="line"><span class="function"><span class="comment">//返回一个新的字符串，它是通过用 newChar 替换此字符串中出现的所有 oldChar 得到的。</span></span></span><br><span class="line"><span class="function">String <span class="title">replace</span><span class="params">(<span class="keyword">char</span> oldChar, <span class="keyword">char</span> newChar)</span></span></span><br><span class="line"><span class="function"><span class="comment">// 返回指定索引处的 char 值。</span></span></span><br><span class="line"><span class="function"><span class="keyword">char</span> <span class="title">charAt</span><span class="params">(<span class="keyword">int</span> index)</span></span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>要注意内存覆盖的问题。一般从后往前插入比从前往后需要移动的字符更少。</li>
+<li>相关题目：有两个排序的数组Al 和A2 ，内存在Al 的末尾有足够多的空余空间容纳A2。 请实现一个函数，把A2 中的所有数字插入到A l 中并且所有的数字是排序的。</li>
+</ol>
+<h2 id="references"><a href="#references" class="headerlink" title="references"></a>references</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/java/java-stringbuffer.html">Java StringBuffer 和 StringBuilder 类</a></p>
+<p>牛客网讨论与题解</p>
+<p>《剑指offer》</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -337,234 +448,6 @@
 <p><img src="/2020/02/27/blog/GitHub-Coding%E5%8F%8C%E9%87%8D%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20200227144643750.png" alt="image-20200227144643750"></p>
 <p>于是重新买了一个域名，最开始也是异常，等大概5分钟就正常了。</p>
 <p>GitHub&amp;Coding的绑定就很简单啦，Coding的配置可以见<a href="http://ciel07yxh.top/2020/02/25/blog/coding%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/">我的上一篇博客</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ciel07yxh.top/2020/02/25/English/American-Accent/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ciel">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ciel's blog">
-      <meta itemprop="description" content="在这里记录我的学习 grit！">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Ciel's blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/02/25/English/American-Accent/" class="post-title-link" itemprop="url">American Accent</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-02-25 16:39:37" itemprop="dateCreated datePublished" datetime="2020-02-25T16:39:37+08:00">2020-02-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-01-27 12:43:29" itemprop="dateModified" datetime="2024-01-27T12:43:29+08:00">2024-01-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/English/" itemprop="url" rel="index"><span itemprop="name">English</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="前记"><a href="#前记" class="headerlink" title="前记"></a>前记</h2><blockquote>
-<p>本篇持续更新，总结一些常见的美音发音规则：）</p>
-</blockquote>
-<p>由于喜欢看美剧的原因，渐渐发现自己的口音比较偏美式发音了，所以决定好好总结一下美式发音的一些规则以及美国人的说话习惯等，希望自己的美语能够更地道一些，同时也提高自己对不是那么字正腔圆的英语的听力水平。</p>
-<p>虽然语言的关键在于交流，但是口音真的能够帮助你给别人一个好的第一印象，让别人更愿意和自己交流下去，同时也给自己自信。</p>
-<blockquote>
-<p>特别推荐：</p>
-<ol>
-<li>微博博主“英语老炮儿马思瑞”！从他的视频里学到了很多。他有开相关的课程。这里的总结也大多来自他的视频。</li>
-<li>开言英语（OpenLanguage），微信上有音频和对应文本，我一般喜欢在喜马拉雅上听（名字是：潘吉Jenny告诉你）</li>
-</ol>
-</blockquote>
-<h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>英文的音素（phoneme）被认为有39-47个不等，大多数认为有44个。</p>
-<p>The English language was influenced by several different languages in different stages of its development. It began as <strong>Germanic-base language</strong>, and was later influenced by Latin, Greek, and most importantly, French.</p>
-<h2 id="音标"><a href="#音标" class="headerlink" title="音标"></a>音标</h2><h3 id="元音vowels"><a href="#元音vowels" class="headerlink" title="元音vowels"></a>元音vowels</h3><p>长元音： <em>[i:]、[ɔ:]、[u:]、[ə:]、[ɑ:]</em></p>
-<p>短元音：<em>[ɔ]、[u]、[ə]、[ʌ]、[e]、[æ]、[i]</em></p>
-<p>双元音：<em>[ei]、[ai]、[ɔi]、[iə]、[ɛə]、[uə]、[au] 、[əu]</em></p>
-<h3 id="辅音consonants"><a href="#辅音consonants" class="headerlink" title="辅音consonants"></a>辅音consonants</h3><p>清辅音：<em>[p]、[t]、[k]、[f]、[θ]、[s]、[ʃ]、[h]、[tr]、[ts]、[tʃ]</em></p>
-<p>浊辅音：<em>[b] 、[d]、[g]、[v]、[ð]、[z]、[ʒ]、[r]、[dr]、[dz]、[dʒ]</em></p>
-<p>鼻音：<em>[m]、[n]、[ŋ]</em></p>
-<p>半元音：<em>[j]、[w]</em></p>
-<p>边音：<em>[l]</em></p>
-<h3 id="注"><a href="#注" class="headerlink" title="注"></a>注</h3><p>由于打不出来，<em>/?/</em>代替<img src="/2020/02/25/English/American-Accent/image-20200206132507860.png" alt="不知名符号">符号（老马视频里看到的这个符号，以前从来没见过哈哈哈）</p>
-<h2 id="美式发音规则"><a href="#美式发音规则" class="headerlink" title="美式发音规则"></a>美式发音规则</h2><p>以下规则不是必须的，有的只是一些人群的发音习惯。了解只是为了能听懂别人说的话。</p>
-<p>规则有：弱读, 省音/吞音, 同化…</p>
-<p>（待补充）</p>
-<hr>
-<ol>
-<li><em>t</em>的发音：</li>
-</ol>
-<ul>
-<li><p><em>“-sten”, “-ften”, “-stle”</em>: silent t</p>
-</li>
-<li><p><em>often</em> 由于历史原因，最早在1700年t发音，然后t不发音，现在又发音，所以t可以发音可不发音。</p>
-</li>
-<li><p><em>”-stl“, “-ftl”</em>: pronounce t</p>
-</li>
-</ul>
-<ol start="2">
-<li>I was a good kid.</li>
-</ol>
-<p>…was a…  /aəzə/</p>
-<ol start="3">
-<li>That’s it. </li>
-</ol>
-<p>/ðæsi?/</p>
-<ol start="4">
-<li>一般功能词（介词，代词，冠词等等）说得很轻，重要得词发高平调（类似中文的一声）。</li>
-</ol>
-<p>…probably  because of… –&gt; prolly cuzuv  (pro ba bly be cause of –&gt;  pro lly cu zuv)</p>
-<ol start="5">
-<li>important 的发音</li>
-</ol>
-<p>/im’ pɔr <em>|t</em> tənt / or /im’ pɔr <em>|t</em> tən <em>|t</em> / , /<em>|t</em>/表示是一个stop t, 不用发出来。</p>
-<p>三音节词，遵守”da-DA-da“的音调。</p>
-<h2 id="美式地道表达"><a href="#美式地道表达" class="headerlink" title="美式地道表达"></a>美式地道表达</h2><ol>
-<li><p><em>What about…?</em> …呢？</p>
-</li>
-<li><p><em>…some sh**t like that.</em> = …some thing like that.（表示不太确定）</p>
-</li>
-</ol>
-<p><em>sh*<em>t</em>在口语中也可以表示*东西/事情</em></p>
-<ol start="3">
-<li><p>缀词用<em>I mean/you know…</em>代替<em>Uh/Um/Like…</em>（让你听起来不太聪明）</p>
-</li>
-<li><p><em>That’s not happening.</em> 这不可能发生</p>
-</li>
-<li><p><em>bad seed</em> 坏孩子</p>
-</li>
-<li><p><em>I/He/She was like…</em> 描述自己/他人的心里活动 </p>
-</li>
-<li><p><em>back then</em> 那个时候</p>
-</li>
-<li><p><em>If I woulda knew = If I would have known = If I had known</em> （虚拟语气）其实是一个错误，但是母语者常说。写作中必须是<em>If I had known</em></p>
-</li>
-<li><p><em>fun</em>意思是’好玩‘而不是’有趣‘，多用于形容事件</p>
-<p>正确用法：This trip was really fun.</p>
-<p>错误用法：This book is really fun.</p>
-</li>
-<li><p><em>outfit</em> 一身打扮</p>
-</li>
-<li><p><em>iI’m excited./ I’m excited for + n./ I’m excited to do something.</em></p>
-</li>
-<li><p><em>*be born and raised in + someplace</em></p>
-</li>
-<li><p><em>give someone a compliment/ to compliment somebody</em>赞扬某人</p>
-<p>praise多用于表扬（孩子），崇拜（宗教）</p>
-</li>
-<li><p><em>end up doing something</em></p>
-</li>
-<li><p><em>holiday</em>在英语里一般特殊指the holiday season，是感恩节到元旦之间的大概五六个星期</p>
-</li>
-</ol>
-<h2 id="英音与美音的区别"><a href="#英音与美音的区别" class="headerlink" title="英音与美音的区别"></a>英音与美音的区别</h2><h3 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h3><p>美国英语是英国英语的一种区域语言变体, 它起源于17~18世纪的英国英语｡</p>
-<p>英国在北美地区曾先后建立了13个殖民地, 同时英国殖民者也把莎士比亚(Shakespeare)和弥尔顿</p>
-<p>(Milton)的英语带到了美洲。</p>
-<p>诺亚•韦伯斯特（Noah Webster）首创“American English ”1828年, 出版《美语词典》（American Dictionary of English Language）从而开启了韦氏词典的历史，进而开启了美式英语的历史。</p>
-<p>自2001年起已有法定标准，但两者均有占据统治地位的相对标准，分别以BBC和VOA为代表，而这两个标准又分别被称为Received Pronunciation（英语公认标准）和 General American（美语普通话），在专业著述中常使用其缩写RP和GA。</p>
-<h3 id="规律"><a href="#规律" class="headerlink" title="规律"></a>规律</h3><ul>
-<li><p>英国人将字母a读[a:]而美国人则读作[æ]</p>
-</li>
-<li><p>英国人将字母o读作[ɔ],而美国人则将o读作近似[a:]音的[a]</p>
-</li>
-<li><p>u和ue英国人发[ju:], 而美国人则发[u:]</p>
-</li>
-</ul>
-<p><em>due &#60;RP&#62;[dju:] &#60;GA&#62;[du:]</em></p>
-<ul>
-<li>对于辅音，RP清晰，GA含混，d和t在美音中/t/发音与/d/相近。美音中/t/ 出现在两个元音之间且处于非重读位置的时候，发音近似/d/</li>
-<li>R出cc现在元音后—美音卷舌</li>
-</ul>
-<p><em>worker &#60;RP&#62;/‘wə:kə/ &#60;GA&#62;/’wərkər/</em></p>
-<ul>
-<li>RP习惯把单词的主重音放在诸音节靠后的音节上，而GA则喜欢把主重音放在前面的音节上。在许多以-ary,-ory结尾的单词和以-ate结尾的双音节词中，RP把主重音放在第二个音节上，而GA则把重音放在第一音节上。</li>
-</ul>
-<p><em>&#60;RP&#62;laˊbocccratory      &#60;GA&#62;ˊlaboratory</em></p>
-<p><em>&#60;RP&#62;dicˊtate           &#60;GA&#62;ˊdictate</em></p>
-<p><em>&#60;RP&#62;miˊgrate         &#60;GA&#62;ˊmigrate</em></p>
-<ul>
-<li>英式英语习惯将单词略读，美式英语则习惯把每个音节全部读出 </li>
-<li>有一些词英式英语和美式英语发音完全不同</li>
-</ul>
-<p><em>leisure &#60;RP&#62;/‘leз∂/ &#60;GA&#62;/‘li:z∂r/</em></p>
-<ul>
-<li>语气：美国人说话相对比较稳重低沉，句势通常呈降调，并且速度慢一些 英国人的语气抑扬顿挫，语调高亢。</li>
-<li>美英发音比较靠口腔后部，英音比较靠前，舌头稍微平一些。</li>
-</ul>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol>
-<li>African American Vernacular English(AAVE) 非裔美国人方言英语：</li>
-</ol>
-<ul>
-<li>降调比较重</li>
-<li>I <code>/ai/</code>发音为<code>/a/</code></li>
-</ul>
-<ol start="2">
-<li><p>英语中双重否定还是表示否定。</p>
-<p>这是非标准的用法，常见于一些地区或AAVE中。</p>
-</li>
-</ol>
-<h2 id="references"><a href="#references" class="headerlink" title="references"></a>references</h2><p><a target="_blank" rel="noopener" href="https://weibo.com/p/1005052735329315/home?from=page_100505&mod=TAB#place">口语老炮儿马思瑞weibo</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/e8twki0kQAcknqu80Mtayw">英语口语与语音入门系列讲座</a></p>
-<p>bilbili视频：</p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av44459414/">英语单词中的”T”何时不发音？often, listen, castle. (中英字幕)</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av4597759/?spm_id_from=333.788.videocard.1">【美语发音】学important吞音，说话瞬间像老美了！</a></p>
 
       
     </div>

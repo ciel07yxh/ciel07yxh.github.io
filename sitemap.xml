@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ciel07yxh.top/2024/01/27/Azure/Nginx-ingress-cert-auto-rotation-with-kv-integration/</loc>
+    
+    <lastmod>2024-01-28</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ciel07yxh.top/tags/index.html</loc>
     
     <lastmod>2024-01-27</lastmod>
@@ -256,13 +263,6 @@
   </url>
   
   <url>
-    <loc>http://ciel07yxh.top/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2024-01-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ciel07yxh.top/tags/mysqlclient/</loc>
     <lastmod>2024-01-28</lastmod>
     <changefreq>daily</changefreq>
@@ -271,6 +271,27 @@
   
   <url>
     <loc>http://ciel07yxh.top/tags/apt-get-install-%E4%BA%A4%E4%BA%92/</loc>
+    <lastmod>2024-01-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ciel07yxh.top/tags/Azure-Kubernetes-Service/</loc>
+    <lastmod>2024-01-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ciel07yxh.top/tags/Azure-key-vault/</loc>
+    <lastmod>2024-01-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ciel07yxh.top/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2024-01-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -298,6 +319,41 @@
   </url>
   
   <url>
+    <loc>http://ciel07yxh.top/tags/Python/</loc>
+    <lastmod>2024-01-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ciel07yxh.top/tags/study-plan/</loc>
+    <lastmod>2024-01-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ciel07yxh.top/tags/tips/</loc>
+    <lastmod>2024-01-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ciel07yxh.top/tags/%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A/</loc>
+    <lastmod>2024-01-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ciel07yxh.top/tags/blog/</loc>
+    <lastmod>2024-01-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://ciel07yxh.top/tags/leetcode/</loc>
     <lastmod>2024-01-28</lastmod>
     <changefreq>daily</changefreq>
@@ -306,13 +362,6 @@
   
   <url>
     <loc>http://ciel07yxh.top/tags/Math/</loc>
-    <lastmod>2024-01-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ciel07yxh.top/tags/tips/</loc>
     <lastmod>2024-01-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -341,20 +390,6 @@
   
   <url>
     <loc>http://ciel07yxh.top/tags/Hash-Table/</loc>
-    <lastmod>2024-01-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ciel07yxh.top/tags/%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A/</loc>
-    <lastmod>2024-01-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ciel07yxh.top/tags/blog/</loc>
     <lastmod>2024-01-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -396,14 +431,14 @@
   </url>
   
   <url>
-    <loc>http://ciel07yxh.top/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
+    <loc>http://ciel07yxh.top/tags/%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2024-01-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ciel07yxh.top/tags/%E6%95%B0%E7%BB%84/</loc>
+    <loc>http://ciel07yxh.top/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
     <lastmod>2024-01-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -423,24 +458,17 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>http://ciel07yxh.top/tags/Python/</loc>
-    <lastmod>2024-01-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ciel07yxh.top/tags/study-plan/</loc>
-    <lastmod>2024-01-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   
   <url>
     <loc>http://ciel07yxh.top/categories/Docker/</loc>
+    <lastmod>2024-01-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ciel07yxh.top/categories/Azure/</loc>
     <lastmod>2024-01-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -461,7 +489,7 @@
   </url>
   
   <url>
-    <loc>http://ciel07yxh.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
+    <loc>http://ciel07yxh.top/categories/Python/</loc>
     <lastmod>2024-01-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -475,14 +503,14 @@
   </url>
   
   <url>
-    <loc>http://ciel07yxh.top/categories/Python/</loc>
+    <loc>http://ciel07yxh.top/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2024-01-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ciel07yxh.top/categories/%E5%85%B6%E4%BB%96/</loc>
+    <loc>http://ciel07yxh.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2024-01-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
