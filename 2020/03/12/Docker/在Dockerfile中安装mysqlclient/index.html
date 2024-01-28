@@ -17,12 +17,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"ciel07yxh.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ciel07yxh.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="mysqlclient这个包安装经常出问题，在docker环境构建的时候同样出现了问题。 尝试了一般的方法，到https:&#x2F;&#x2F;www.lfd.uci.edu&#x2F;~gohlke&#x2F;pythonlibs&#x2F;#mysqlclient手动下载whl文件，放入docker，手动通过&#96;RUN pip install mysqlclient‑xxx.whl&#96;指令安装，结果无论什么版本都提示不支持，放弃。 后面通过在D">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在Dockerfile中安装mysqlclient">
-<meta property="og:url" content="http://ciel07yxh.top/2020/03/12/Docker/%E5%9C%A8Dockerfile%E4%B8%AD%E5%AE%89%E8%A3%85mysqlclient/index.html">
+<meta property="og:url" content="http://blog.ciel07yxh.top/2020/03/12/Docker/%E5%9C%A8Dockerfile%E4%B8%AD%E5%AE%89%E8%A3%85mysqlclient/index.html">
 <meta property="og:site_name" content="Ciel&#39;s blog">
 <meta property="og:description" content="mysqlclient这个包安装经常出问题，在docker环境构建的时候同样出现了问题。 尝试了一般的方法，到https:&#x2F;&#x2F;www.lfd.uci.edu&#x2F;~gohlke&#x2F;pythonlibs&#x2F;#mysqlclient手动下载whl文件，放入docker，手动通过&#96;RUN pip install mysqlclient‑xxx.whl&#96;指令安装，结果无论什么版本都提示不支持，放弃。 后面通过在D">
 <meta property="og:locale" content="en_US">
@@ -35,11 +35,11 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://ciel07yxh.top/2020/03/12/Docker/%E5%9C%A8Dockerfile%E4%B8%AD%E5%AE%89%E8%A3%85mysqlclient/">
+<link rel="canonical" href="http://blog.ciel07yxh.top/2020/03/12/Docker/%E5%9C%A8Dockerfile%E4%B8%AD%E5%AE%89%E8%A3%85mysqlclient/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://ciel07yxh.top/2020/03/12/Docker/%E5%9C%A8Dockerfile%E4%B8%AD%E5%AE%89%E8%A3%85mysqlclient/","path":"2020/03/12/Docker/在Dockerfile中安装mysqlclient/","title":"在Dockerfile中安装mysqlclient"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://blog.ciel07yxh.top/2020/03/12/Docker/%E5%9C%A8Dockerfile%E4%B8%AD%E5%AE%89%E8%A3%85mysqlclient/","path":"2020/03/12/Docker/在Dockerfile中安装mysqlclient/","title":"在Dockerfile中安装mysqlclient"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>在Dockerfile中安装mysqlclient | Ciel's blog</title>
@@ -158,7 +158,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://ciel07yxh.top/2020/03/12/Docker/%E5%9C%A8Dockerfile%E4%B8%AD%E5%AE%89%E8%A3%85mysqlclient/">
+    <link itemprop="mainEntityOfPage" href="http://blog.ciel07yxh.top/2020/03/12/Docker/%E5%9C%A8Dockerfile%E4%B8%AD%E5%AE%89%E8%A3%85mysqlclient/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
