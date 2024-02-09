@@ -182,7 +182,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-02-10 02:11:52 / Modified: 02:48:33" itemprop="dateCreated datePublished" datetime="2024-02-10T02:11:52+08:00">2024-02-10</time>
+      <time title="Created: 2024-02-10 02:11:52 / Modified: 03:01:32" itemprop="dateCreated datePublished" datetime="2024-02-10T02:11:52+08:00">2024-02-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -208,7 +208,7 @@
 <p>reference:</p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/sunshine940326/article/details/70936988/">hexo高阶教程：想让你的博客被更多的人在搜索引擎中搜到吗？_搜狗收录hexo-CSDN博客</a></p>
 </blockquote>
-<p>Notes:</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li><p>如何验证自己的网站是否有被搜索引擎收录：</p>
 <p>搜索”site: <domain-name>“</domain-name></p>
@@ -218,13 +218,16 @@
 </ul>
 <h1 id="Baidu"><a href="#Baidu" class="headerlink" title="Baidu"></a>Baidu</h1><p>百度站长平台： <a target="_blank" rel="noopener" href="https://ziyuan.baidu.com/">https://ziyuan.baidu.com/</a></p>
 <ul>
-<li><p>添加站点</p>
-<p>站点管理 &gt; 添加站点 &gt; 验证站点所有权</p>
+<li><p><strong>添加站点</strong></p>
+<p>站点管理 &gt; 添加站点 &gt; 验证站点所有权（可能大概需要1天的时间）</p>
 <p><img src="/2024/02/10/blog/%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%AF%B9%E4%BA%8E%E8%87%AA%E5%BB%BA%E7%BD%91%E7%AB%99%EF%BC%88%E5%8D%9A%E5%AE%A2%EF%BC%89%E7%9A%84%E6%94%B6%E5%BD%95/image-20240210022100732.png" alt="image-20240210022100732"></p>
 <p>文件验证的方式：将验证文件放到hexo的public文件夹，即上传github.io项目的根目录。</p>
-<p>hexo clean后public文件夹里面的验证文件消失了怎么办？</p>
+<p>但hexo clean后public文件夹里面的验证文件消失了怎么办？</p>
+<blockquote>
+<p>:exclamation: 整个public文件夹是执行hexo g后生成的，若执行hexo clean会把整个public连同CNAME文件夹删掉。应该把需要在根目录保留的文件存放在source文件夹下，在执行hexo g命令时，其会把source文件夹下的文件原原本本地复制到public文件夹下，这样文件就不会丢失了。</p>
+</blockquote>
 </li>
-<li><p>资源收录</p>
+<li><p><strong>资源收录</strong></p>
 <ul>
 <li><p>生成Sitemap</p>
 <p>使用npm插件自动生成网站sitemap，命令执行完后，根目录会根据配置文件的域名生成sitemap文件；</p>
