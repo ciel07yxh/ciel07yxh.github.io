@@ -115,18 +115,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -143,6 +143,121 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://blog.ciel07yxh.top/2019/12/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/1295-Find-Numbers-with-Even-Number-of-Digits/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ciel">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ciel's blog">
+      <meta itemprop="description" content="在这里记录我的学习 grit！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Ciel's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/12/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/1295-Find-Numbers-with-Even-Number-of-Digits/" class="post-title-link" itemprop="url">1295. Find Numbers with Even Number of Digits</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-12-23 13:46:35" itemprop="dateCreated datePublished" datetime="2019-12-23T13:46:35+08:00">2019-12-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-01-27 12:43:30" itemprop="dateModified" datetime="2024-01-27T12:43:30+08:00">2024-01-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="1295-Find-Numbers-with-Even-Number-of-Digits"><a href="#1295-Find-Numbers-with-Even-Number-of-Digits" class="headerlink" title="1295. Find Numbers with Even Number of Digits"></a>1295. Find Numbers with Even Number of Digits</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>Given an array <code>nums</code> of integers, return how many of them contain an <strong>even number</strong> of digits.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Input: nums &#x3D; [12,345,2,6,7896]</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: </span><br><span class="line">12 contains 2 digits (even number of digits). </span><br><span class="line">345 contains 3 digits (odd number of digits). </span><br><span class="line">2 contains 1 digit (odd number of digits). </span><br><span class="line">6 contains 1 digit (odd number of digits). </span><br><span class="line">7896 contains 4 digits (even number of digits). </span><br><span class="line">Therefore only 12 and 7896 contain an even number of digits.</span><br></pre></td></tr></table></figure>
+
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: nums &#x3D; [555,901,482,1771]</span><br><span class="line">Output: 1 </span><br><span class="line">Explanation: </span><br><span class="line">Only 1771 contains an even number of digits</span><br></pre></td></tr></table></figure>
+
+<p><strong>Constraints:</strong></p>
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 500</code></li>
+<li><code>1 &lt;= nums[i] &lt;= 10^5</code></li>
+</ul>
+<h2 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h2><p>思路：题目的关键点在于如何计数一个整数的位数。Hint给出的方法是：Divide the number by 10 again and again to get the number of digits。我想到的是把整数转化为string类型，因为python种字符串类型是可迭代的，可以直接用<code>len()</code>计数位数。</p>
+<p>我的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findNumbers</span>(<span class="params">self, nums</span>):</span></span><br><span class="line">        <span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(<span class="built_in">str</span>(num))%<span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">                <span class="built_in">sum</span> += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sum</span></span><br></pre></td></tr></table></figure>
+
+<p>别人更简洁的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findNumbers</span>(<span class="params">self, nums</span>):</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sum</span>(<span class="built_in">len</span>(<span class="built_in">str</span>(n)) % <span class="number">2</span> == <span class="number">0</span> <span class="keyword">for</span> n <span class="keyword">in</span> nums)</span><br></pre></td></tr></table></figure>
+
+<p>但是虽然第二种代码更简洁，但似乎时空复杂度是差不多的。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li><p>sum函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sum</span>(iterable[, start])</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>iterable – 可迭代对象，如：列表、元组、集合。</li>
+<li>start – 指定相加的参数，如果没有设置这个值，默认为0。</li>
+</ul>
+<p>经常看见一些简单的代码是用了<strong>sum函数求和生成器</strong>。</p>
+<p>此处遍历了nums，判断有几个元素的<code>len(str(n)) % 2 == 0</code>结果为<code>True</code></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -398,134 +513,6 @@
 <p><img src="/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/image-20200103112438631.png" alt="image-20200103112438631"></p>
 <p>然后选择Environment 进行配置</p>
 <p><img src="/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/image-20200103112429090.png" alt="image-20200103112429090"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://blog.ciel07yxh.top/2019/12/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/1108-Defanging-an-IP-Address/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ciel">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ciel's blog">
-      <meta itemprop="description" content="在这里记录我的学习 grit！">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Ciel's blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/12/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/1108-Defanging-an-IP-Address/" class="post-title-link" itemprop="url">1108. Defanging an IP Address</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2019-12-20 19:56:44" itemprop="dateCreated datePublished" datetime="2019-12-20T19:56:44+08:00">2019-12-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-01-27 12:43:30" itemprop="dateModified" datetime="2024-01-27T12:43:30+08:00">2024-01-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="1108-Defanging-an-IP-Address"><a href="#1108-Defanging-an-IP-Address" class="headerlink" title="1108. Defanging an IP Address"></a>1108. Defanging an IP Address</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
-<p>Given a valid (IPv4) IP <code>address</code>, return a defanged version of that IP address.</p>
-<p>A <em>defanged IP address</em> replaces every period <code>&quot;.&quot;</code> with <code>&quot;[.]&quot;</code>.</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: address &#x3D; &quot;1.1.1.1&quot;</span><br><span class="line">Output: &quot;1[.]1[.]1[.]1&quot;</span><br></pre></td></tr></table></figure>
-
-<p><strong>Example 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: address &#x3D; &quot;255.100.50.0&quot;</span><br><span class="line">Output: &quot;255[.]100[.]50[.]0&quot;</span><br></pre></td></tr></table></figure>
-
-<p><strong>Constraints:</strong></p>
-<ul>
-<li>The given <code>address</code> is a valid IPv4 address.</li>
-</ul>
-</blockquote>
-<h2 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h2><p>很简单的一道题，字符串的替换。</p>
-<p>第一次尝试：最开始没有想起<code>replace</code>方法，用了笨办法（<code>split</code>方法）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">defangIPaddr</span>(<span class="params">self, address</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type address: str</span></span><br><span class="line"><span class="string">        :rtype: str</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        new_ip = <span class="string">&#x27;&#x27;</span></span><br><span class="line">        numbers = address.split(<span class="string">&#x27;.&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> number <span class="keyword">in</span> numbers:</span><br><span class="line">            <span class="keyword">if</span> number != <span class="string">&#x27;.&#x27;</span>:</span><br><span class="line">                new_ip += number + <span class="string">&#x27;[.]&#x27;</span></span><br><span class="line">        <span class="keyword">return</span> new_ip[:<span class="number">-3</span>]</span><br></pre></td></tr></table></figure>
-
-<p>更好的答案：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">defangIPaddr</span>(<span class="params">self, address</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type address: str</span></span><br><span class="line"><span class="string">        :rtype: str</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> address.replace(<span class="string">&#x27;.&#x27;</span>, <span class="string">&#x27;[.]&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
-<li>这里弄混了split和strip方法，特此总结：</li>
-</ol>
-<p><strong>Python strip()</strong> 方法用于移除字符串<strong>头尾</strong>指定的字符（默认为空格或换行符）或字符序列。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span>.strip([chars])</span><br></pre></td></tr></table></figure>
-
-<p><strong>Python split()</strong> 通过指定分隔符对字符串进行切片，如果参数<code>num</code>有指定值，则分隔<code>num+1</code>个子字符串(<code>num</code>表示分割次数)</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span>.split(<span class="built_in">str</span>=<span class="string">&quot;&quot;</span>, num=string.count(<span class="built_in">str</span>))</span><br></pre></td></tr></table></figure>
-
-<p>这里也可以用<code>split</code>方法与<code>str.join(sequence)</code>方法拼接获得结果。</p>
-<ol start="2">
-<li>任何可以用 for 循环c遍历的东西都是可迭代的。python的字符串也是可迭代的。所以有：</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span> = <span class="string">&#x27;1.1.1.1&#x27;</span></span><br><span class="line"><span class="keyword">for</span> a <span class="keyword">in</span> <span class="built_in">str</span>:</span><br><span class="line">    print(a)</span><br></pre></td></tr></table></figure>
-
-<p>结果为：</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line">.</span><br><span class="line"><span class="number">1</span></span><br><span class="line">.</span><br><span class="line"><span class="number">1</span></span><br><span class="line">.</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>每一种语言都有相应的字符串替换函数，如：</li>
-</ol>
-<p>C++中可以用<code>regex_replace(address, regex(&quot;[.]&quot;), &quot;[.]&quot;);</code></p>
-<p>JAVA中可以用<code>address.replace(&quot;.&quot;, &quot;[.]&quot;);</code>或者<code>String.join(&quot;[.]&quot;, address.split(&quot;\\.&quot;));</code></p>
 
       
     </div>

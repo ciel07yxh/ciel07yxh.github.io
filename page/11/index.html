@@ -115,18 +115,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -143,6 +143,105 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://blog.ciel07yxh.top/2019/12/03/Python/python-virtualenvironment-%E8%BF%81%E7%A7%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ciel">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ciel's blog">
+      <meta itemprop="description" content="在这里记录我的学习 grit！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Ciel's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/12/03/Python/python-virtualenvironment-%E8%BF%81%E7%A7%BB/" class="post-title-link" itemprop="url">python virtualenvironment 迁移</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-12-03 22:30:49" itemprop="dateCreated datePublished" datetime="2019-12-03T22:30:49+08:00">2019-12-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-01-27 12:43:29" itemprop="dateModified" datetime="2024-01-27T12:43:29+08:00">2024-01-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="python-virtualenvironment-迁移"><a href="#python-virtualenvironment-迁移" class="headerlink" title="python virtualenvironment 迁移"></a>python virtualenvironment 迁移</h1><p>python virtualenvironment的便利之处就在于构建了独立的python运行环境，工程所需要的环境可以很方便地打包随程序迁移到其他路径/其他机器上。</p>
+<p>最开始以为python虚拟环境直接跟随工程打包起来，到其他机器就可以用了，真的是too young too naive…然后就收到报错啦。</p>
+<p>python虚拟环境迁移的正确打开方式是：</p>
+<h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><p>在移动工程后，修改虚拟环境中的路径，如active, pip, ipython等等</p>
+<p>如activate.bat下：</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> &quot;VIRTUAL_ENV=C:\Users\admin\PycharmProjects\venv_test\venv&quot;</span><br></pre></td></tr></table></figure>
+
+<p>但是这个方法有些麻烦，所以还是推荐选择方法2</p>
+<h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>在原本路径的venv1中执行<code>pip freeze &gt; requirements.txt</code>将包依赖的信息保存在requirements.txt文件中。</p>
+<p>到新路径下的venv2中执行<code>pip install -r requirements.txt</code>，pip就会自动从网上下载并安装所有包。</p>
+<p>当然还有其他的方法…</p>
+<blockquote>
+<p>若有误或待改进之处，望前辈们指正！</p>
+<p>转载请注明出处！</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
