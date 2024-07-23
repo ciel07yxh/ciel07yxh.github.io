@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://blog.ciel07yxh.top/2024/07/23/tools/Git-notes/</loc>
+    <lastmod>2024-07-23</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.ciel07yxh.top/2019/12/08/Python/Python%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2024-05-13</lastmod>
+  </url>
+  <url>
     <loc>http://blog.ciel07yxh.top/2024/03/22/Csharp/Csharp-basics-study-notes-W3schools/</loc>
     <lastmod>2024-03-23</lastmod>
   </url>
@@ -94,10 +102,6 @@
   </url>
   <url>
     <loc>http://blog.ciel07yxh.top/2019/12/03/Python/python-virtualenvironment-%E8%BF%81%E7%A7%BB/</loc>
-    <lastmod>2024-01-27</lastmod>
-  </url>
-  <url>
-    <loc>http://blog.ciel07yxh.top/2019/12/08/Python/Python%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2024-01-27</lastmod>
   </url>
   <url>
