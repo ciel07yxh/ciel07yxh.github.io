@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.ciel07yxh.top/2025/05/10/Azure/Analyze-and-Fix-Azure-WAF-False-Positive-Blocks/</loc>
+    
+    <lastmod>2025-05-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/2024/01/27/Azure/Nginx-ingress-cert-auto-rotation-with-kv-integration/</loc>
+    
+    <lastmod>2025-05-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/2019/12/08/blog/blog%E9%85%8D%E7%BD%AE/</loc>
+    
+    <lastmod>2025-05-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.ciel07yxh.top/2020/11/29/English/TED-How-the-compass-unlocked-the-world/</loc>
     
     <lastmod>2025-05-10</lastmod>
@@ -245,15 +272,6 @@
   </url>
   
   <url>
-    <loc>http://blog.ciel07yxh.top/2019/12/08/blog/blog%E9%85%8D%E7%BD%AE/</loc>
-    
-    <lastmod>2025-04-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.ciel07yxh.top/2020/02/27/blog/GitHub-Coding%E5%8F%8C%E9%87%8D%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     
     <lastmod>2025-04-13</lastmod>
@@ -325,15 +343,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>http://blog.ciel07yxh.top/2024/01/27/Azure/Nginx-ingress-cert-auto-rotation-with-kv-integration/</loc>
-    
-    <lastmod>2025-04-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>http://blog.ciel07yxh.top/</loc>
@@ -344,56 +353,7 @@
 
   
   <url>
-    <loc>http://blog.ciel07yxh.top/tags/Python/</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.ciel07yxh.top/tags/study-plan/</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.ciel07yxh.top/tags/English/</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.ciel07yxh.top/tags/speaking/</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.ciel07yxh.top/tags/mysql/</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.ciel07yxh.top/tags/django/</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.ciel07yxh.top/tags/%E8%B8%A9%E5%9D%91/</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.ciel07yxh.top/tags/tips/</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -414,6 +374,55 @@
   </url>
   
   <url>
+    <loc>http://blog.ciel07yxh.top/tags/django/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/tags/%E8%B8%A9%E5%9D%91/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/tags/Azure/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/tags/Troubleshooting/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/tags/WAF/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/tags/OWASP/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/tags/English/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.ciel07yxh.top/tags/TED/</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -421,21 +430,7 @@
   </url>
   
   <url>
-    <loc>http://blog.ciel07yxh.top/tags/%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A/</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.ciel07yxh.top/tags/blog/</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.ciel07yxh.top/tags/%E6%95%99%E7%A8%8B/</loc>
+    <loc>http://blog.ciel07yxh.top/tags/speaking/</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -456,7 +451,49 @@
   </url>
   
   <url>
-    <loc>http://blog.ciel07yxh.top/tags/git/</loc>
+    <loc>http://blog.ciel07yxh.top/tags/programming/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/tags/tips/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/tags/%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/tags/blog/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/tags/Python/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/tags/study-plan/</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -484,6 +521,13 @@
   </url>
   
   <url>
+    <loc>http://blog.ciel07yxh.top/tags/git/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.ciel07yxh.top/tags/Array/</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -498,6 +542,13 @@
   </url>
   
   <url>
+    <loc>http://blog.ciel07yxh.top/tags/Hash-Table/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.ciel07yxh.top/tags/%E9%93%BE%E8%A1%A8/</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -506,13 +557,6 @@
   
   <url>
     <loc>http://blog.ciel07yxh.top/tags/JAVA/</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.ciel07yxh.top/tags/Hash-Table/</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -567,45 +611,10 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>http://blog.ciel07yxh.top/tags/programming/</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
-    <loc>http://blog.ciel07yxh.top/categories/Python/</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.ciel07yxh.top/categories/English/</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.ciel07yxh.top/categories/Docker/</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.ciel07yxh.top/categories/blog/</loc>
-    <lastmod>2025-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.ciel07yxh.top/categories/NS3/</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -619,7 +628,14 @@
   </url>
   
   <url>
-    <loc>http://blog.ciel07yxh.top/categories/tools/</loc>
+    <loc>http://blog.ciel07yxh.top/categories/English/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/categories/C/</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -633,6 +649,27 @@
   </url>
   
   <url>
+    <loc>http://blog.ciel07yxh.top/categories/Python/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/categories/NS3/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.ciel07yxh.top/categories/blog/</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.ciel07yxh.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -640,7 +677,7 @@
   </url>
   
   <url>
-    <loc>http://blog.ciel07yxh.top/categories/C/</loc>
+    <loc>http://blog.ciel07yxh.top/categories/tools/</loc>
     <lastmod>2025-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

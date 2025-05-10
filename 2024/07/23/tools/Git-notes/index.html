@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ciel07yxh.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.23.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ciel07yxh.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.23.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="git是一个分布式版本控制系统，不同类型的版本控制软件还有svn，mercurial，vss，SourceAnywhere等。 而Github是一个集成了git的服务。 不管是使用Github，Coding还是Gitlab，我们都需要熟悉Git这一版本管理工具。本文简单介绍Git的工作原理，并总结了一些常用的git指令，冲突解决等，以便自己查看。 基本介绍（图片均来自网络）  从上图可以看出git">
 <meta property="og:type" content="article">
@@ -69,7 +69,6 @@
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
@@ -144,7 +143,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -155,7 +154,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -231,13 +230,6 @@
     </span>
 
   
-    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">Views: </span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
 </div>
 
         </div>
@@ -408,7 +400,7 @@
 </blockquote>
 <h2 id="第三方平台使用"><a href="#第三方平台使用" class="headerlink" title="第三方平台使用"></a>第三方平台使用</h2><h3 id="添加SSH-Key到远端服务器"><a href="#添加SSH-Key到远端服务器" class="headerlink" title="添加SSH Key到远端服务器"></a>添加SSH Key到远端服务器</h3><ol>
 <li>打开terminal，输入命令<code>ls -al ~/.ssh</code>，检查是否显示有id_rsa.pub或者id_dsa.pub存在，如果存在请直接跳至第3步。</li>
-<li>在bash中输入ssh-keygen -t rsa -C ”<a href="mailto:&#121;&#111;&#x75;&#x72;&#x45;&#109;&#x61;&#x69;&#108;&#x40;&#101;&#120;&#97;&#x6d;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">yourEmail@example.com</a>”</li>
+<li>在bash中输入ssh-keygen -t rsa -C ”<a href="mailto:&#x79;&#x6f;&#117;&#114;&#x45;&#x6d;&#97;&#x69;&#x6c;&#64;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#x65;&#x2e;&#x63;&#x6f;&#109;">yourEmail@example.com</a>”</li>
 <li>打开id_rsa.pub文件，并且复制全部内容</li>
 <li>打开第三方平台账户，添加SSH Keys</li>
 </ol>
@@ -442,6 +434,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2025/05/10/Azure/Analyze-and-Fix-Azure-WAF-False-Positive-Blocks/" rel="next" title="Analyze and Fix Azure WAF False Positive Blocks">
+                  Analyze and Fix Azure WAF False Positive Blocks <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -467,30 +462,8 @@
     </span>
     <span class="author" itemprop="copyrightHolder">ciel</span>
   </div>
-<div class="busuanzi-count">
-    <span class="post-meta-item" id="busuanzi_container_site_uv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="Total Visitors">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="Total Views">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
-
-
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
 
     </div>
   </footer>
