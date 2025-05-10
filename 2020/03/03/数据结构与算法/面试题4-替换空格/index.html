@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ciel07yxh.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.23.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="题目请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。 解题调用自带函数StringBuffer的replace函数与String的不同，所以需要先将StringBuffer转化为String。 123456public class Solution &#123;    public Str">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试题4 - 替换空格">
+<meta property="og:url" content="http://blog.ciel07yxh.top/2020/03/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%9D%A2%E8%AF%95%E9%A2%984-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/index.html">
+<meta property="og:site_name" content="Ciel&#39;s blog">
+<meta property="og:description" content="题目请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。 解题调用自带函数StringBuffer的replace函数与String的不同，所以需要先将StringBuffer转化为String。 123456public class Solution &#123;    public Str">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-03T09:08:23.000Z">
+<meta property="article:modified_time" content="2025-04-13T13:08:23.410Z">
+<meta property="article:author" content="ciel">
+<meta property="article:tag" content="刷题笔记">
+<meta property="article:tag" content="剑指offer">
+<meta property="article:tag" content="字符串">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://blog.ciel07yxh.top/2020/03/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%9D%A2%E8%AF%95%E9%A2%984-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://blog.ciel07yxh.top/2020/03/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%9D%A2%E8%AF%95%E9%A2%984-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/","path":"2020/03/03/数据结构与算法/面试题4-替换空格/","title":"面试题4 - 替换空格"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>面试题4 - 替换空格 | Ciel's blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Ciel's blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hi, this is Ciel!</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">解题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E7%94%A8%E8%87%AA%E5%B8%A6%E5%87%BD%E6%95%B0"><span class="nav-number">2.1.</span> <span class="nav-text">调用自带函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E7%9A%84%E6%95%B0%E7%BB%84%E5%AD%98"><span class="nav-number">2.2.</span> <span class="nav-text">创建新的数组存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E5%8E%9F%E6%9D%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8A%E6%9B%BF%E6%8D%A2"><span class="nav-number">2.3.</span> <span class="nav-text">在原来字符串上替换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#references"><span class="nav-number">4.</span> <span class="nav-text">references</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ciel</p>
+  <div class="site-description" itemprop="description">在这里记录我的学习 grit！</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.ciel07yxh.top/2020/03/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%9D%A2%E8%AF%95%E9%A2%984-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ciel">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ciel's blog">
+      <meta itemprop="description" content="在这里记录我的学习 grit！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="面试题4 - 替换空格 | Ciel's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          面试题4 - 替换空格
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-03-03 17:08:23" itemprop="dateCreated datePublished" datetime="2020-03-03T17:08:23+08:00">2020-03-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-04-13 21:08:23" itemprop="dateModified" datetime="2025-04-13T21:08:23+08:00">2025-04-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。</p>
+<h2 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h2><h3 id="调用自带函数"><a href="#调用自带函数" class="headerlink" title="调用自带函数"></a>调用自带函数</h3><p><code>StringBuffer</code>的<code>replace</code>函数与<code>String</code>的不同，所以需要先将<code>StringBuffer</code>转化为<code>String</code>。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">replaceSpace</span><span class="params">(StringBuffer str)</span> &#123;</span><br><span class="line">        <span class="comment">// 注意这里toString和String的replace方法都会生成重新String</span></span><br><span class="line">        <span class="keyword">return</span> str.toString().replace(<span class="string">&quot; &quot;</span>, <span class="string">&quot;%20&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建新的数组存"><a href="#创建新的数组存" class="headerlink" title="创建新的数组存"></a>创建新的数组存</h3><p>当遇到 “ “，就追加 “%20”，否则遇到什么追加什么</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">replaceSpace</span><span class="params">(StringBuffer str)</span> &#123;</span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;str.length();i++)&#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">c</span> <span class="operator">=</span> str.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(c == <span class="string">&#x27; &#x27;</span>)&#123;</span><br><span class="line">                sb.append(<span class="string">&quot;%20&quot;</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                sb.append(c);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="在原来字符串上替换"><a href="#在原来字符串上替换" class="headerlink" title="在原来字符串上替换"></a>在原来字符串上替换</h3><p>先计算出空格数量，即为要拓展的字符数量。</p>
+<p>然后遍历字符串，当遇到空格时替换。（使用从后向前替换的方法，这样移动的字符数要少一些。）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">replaceSpace</span><span class="params">(StringBuffer str)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">spacenum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;str.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(str.charAt(i)==<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">                spacenum++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">indexold</span> <span class="operator">=</span> str.length()-<span class="number">1</span>; </span><br><span class="line">        <span class="type">int</span> <span class="variable">newlength</span> <span class="operator">=</span> str.length() + spacenum*<span class="number">2</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">indexnew</span> <span class="operator">=</span> newlength-<span class="number">1</span>;</span><br><span class="line">        str.setLength(newlength);</span><br><span class="line">        <span class="keyword">for</span>(;indexold&gt;=<span class="number">0</span>;indexold--)&#123; </span><br><span class="line">            <span class="comment">// 已经替换所有空格后，退出循环</span></span><br><span class="line">            <span class="keyword">if</span> (spacenum==<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(str.charAt(indexold) == <span class="string">&#x27; &#x27;</span>)&#123;  </span><br><span class="line">                str.setCharAt(indexnew--, <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">                str.setCharAt(indexnew--, <span class="string">&#x27;2&#x27;</span>);</span><br><span class="line">                str.setCharAt(indexnew--, <span class="string">&#x27;%&#x27;</span>);</span><br><span class="line">                spacenum--;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                str.setCharAt(indexnew--, str.charAt(indexold));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> str.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li><code>String</code>, <code>StringBuilder</code>&amp;<code>StringBuffer</code></li>
+</ol>
+<p>当对字符串进行修改的时候，需要使用 StringBuffer 和 StringBuilder 类。</p>
+<p>和 String 类不同的是，StringBuffer 和 StringBuilder 类的对象能够被多次的修改，并且不产生新的未使用对象，返回的是缓存区本身。</p>
+<p>StringBuilder 类在 Java 5 中被提出，它和 StringBuffer 之间的最大不同在于 StringBuilder 的方法不是线程安全的（不能同步访问）。</p>
+<p>由于 StringBuilder 相较于 StringBuffer 有速度优势，所以多数情况下建议使用 StringBuilder 类。然而在应用程序要求线程安全的情况下，则必须使用 StringBuffer 类。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// StringBuffer:</span></span><br><span class="line"><span class="comment">// 使用给定 String 中的字符替换此序列的子字符串中的字符。</span></span><br><span class="line">replace(<span class="type">int</span> start, <span class="type">int</span> end, String str)</span><br><span class="line"><span class="comment">// 返回此序列中数据的字符串表示形式。</span></span><br><span class="line">String <span class="title function_">toString</span><span class="params">()</span></span><br><span class="line"><span class="comment">// 返回指定索引处的 char 值。</span></span><br><span class="line"><span class="type">char</span> <span class="title function_">charAt</span><span class="params">(<span class="type">int</span> index)</span></span><br><span class="line"><span class="comment">// 设置字符序列的长度。</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">setLength</span><span class="params">(<span class="type">int</span> newLength)</span></span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"><span class="comment">// String:</span></span><br><span class="line"><span class="comment">//返回一个新的字符串，它是通过用 newChar 替换此字符串中出现的所有 oldChar 得到的。</span></span><br><span class="line">String <span class="title function_">replace</span><span class="params">(<span class="type">char</span> oldChar, <span class="type">char</span> newChar)</span></span><br><span class="line"><span class="comment">// 返回指定索引处的 char 值。</span></span><br><span class="line"><span class="type">char</span> <span class="title function_">charAt</span><span class="params">(<span class="type">int</span> index)</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>要注意内存覆盖的问题。一般从后往前插入比从前往后需要移动的字符更少。</li>
+<li>相关题目：有两个排序的数组Al 和A2 ，内存在Al 的末尾有足够多的空余空间容纳A2。 请实现一个函数，把A2 中的所有数字插入到A l 中并且所有的数字是排序的。</li>
+</ol>
+<h2 id="references"><a href="#references" class="headerlink" title="references"></a>references</h2><p><a href="https://www.runoob.com/java/java-stringbuffer.html">Java StringBuffer 和 StringBuilder 类</a></p>
+<p>牛客网讨论与题解</p>
+<p>《剑指offer》</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" rel="tag"># 刷题笔记</a>
+              <a href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag"># 剑指offer</a>
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"># 字符串</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/03/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%9D%A2%E8%AF%95%E9%A2%985-%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/" rel="prev" title="面试题5-从尾到头打印链表">
+                  <i class="fa fa-angle-left"></i> 面试题5-从尾到头打印链表
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/03/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8%E5%8F%8A%E5%85%B6%E5%8F%8D%E8%BD%AC%E7%9A%84JAVA%E5%AE%9E%E7%8E%B0/" rel="next" title="链表及其反转的JAVA实现">
+                  链表及其反转的JAVA实现 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">ciel</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

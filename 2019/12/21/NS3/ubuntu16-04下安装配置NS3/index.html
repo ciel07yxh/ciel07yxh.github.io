@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ciel07yxh.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.23.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="NS3安装最开始按照同学的blog进行安装： 安装依赖库 更新apt  1sudo apt-get update   安装相关依赖  1234567891011121314151617181920212223242526272829303132333435363738394041424344sudo apt-get install gcc g++ python python-dev  #C++和p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu16.04下安装配置NS3">
+<meta property="og:url" content="http://blog.ciel07yxh.top/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/index.html">
+<meta property="og:site_name" content="Ciel&#39;s blog">
+<meta property="og:description" content="NS3安装最开始按照同学的blog进行安装： 安装依赖库 更新apt  1sudo apt-get update   安装相关依赖  1234567891011121314151617181920212223242526272829303132333435363738394041424344sudo apt-get install gcc g++ python python-dev  #C++和p">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://blog.ciel07yxh.top/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/image-20200103105339513.png">
+<meta property="og:image" content="http://blog.ciel07yxh.top/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/image-20200103105418681.png">
+<meta property="og:image" content="http://blog.ciel07yxh.top/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/image-20200103112510368.png">
+<meta property="og:image" content="http://blog.ciel07yxh.top/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/image-20200103111208090.png">
+<meta property="og:image" content="http://blog.ciel07yxh.top/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/image-20200103112438631.png">
+<meta property="og:image" content="http://blog.ciel07yxh.top/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/image-20200103112429090.png">
+<meta property="article:published_time" content="2019-12-21T10:33:11.000Z">
+<meta property="article:modified_time" content="2025-04-13T13:08:23.060Z">
+<meta property="article:author" content="ciel">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.ciel07yxh.top/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/image-20200103105339513.png">
+
+
+<link rel="canonical" href="http://blog.ciel07yxh.top/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://blog.ciel07yxh.top/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/","path":"2019/12/21/NS3/ubuntu16-04下安装配置NS3/","title":"ubuntu16.04下安装配置NS3"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>ubuntu16.04下安装配置NS3 | Ciel's blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Ciel's blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hi, this is Ciel!</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NS3%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">NS3安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E5%BA%93"><span class="nav-number">1.1.</span> <span class="nav-text">安装依赖库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85NS3"><span class="nav-number">1.2.</span> <span class="nav-text">安装NS3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%AF%91NS3"><span class="nav-number">1.3.</span> <span class="nav-text">编译NS3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%B9%B6%E8%BF%90%E8%A1%8C%E7%9B%B8%E5%85%B3%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.4.</span> <span class="nav-text">测试并运行相关程序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NS3%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">NS3配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDEclipse"><span class="nav-number">2.1.</span> <span class="nav-text">下载Eclipse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E9%A1%B9%E7%9B%AE"><span class="nav-number">2.2.</span> <span class="nav-text">导入项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8waf%E7%BC%96%E8%AF%91NS3%E9%A1%B9%E7%9B%AE"><span class="nav-number">2.3.</span> <span class="nav-text">用waf编译NS3项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Eclipse-%E4%B8%AD-%E8%AE%BE%E7%BD%AENS3-%E7%BC%96%E8%AF%91%E5%99%A8%E4%B8%BA-waf"><span class="nav-number">2.4.</span> <span class="nav-text">Eclipse 中 设置NS3 编译器为 waf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEEclipse-%E6%89%A7%E8%A1%8C%E7%A8%8B%E5%BA%8F%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7"><span class="nav-number">2.5.</span> <span class="nav-text">配置Eclipse 执行程序使用外部工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEDebug"><span class="nav-number">2.6.</span> <span class="nav-text">配置Debug</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ciel</p>
+  <div class="site-description" itemprop="description">在这里记录我的学习 grit！</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.ciel07yxh.top/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ciel">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ciel's blog">
+      <meta itemprop="description" content="在这里记录我的学习 grit！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="ubuntu16.04下安装配置NS3 | Ciel's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ubuntu16.04下安装配置NS3
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-12-21 18:33:11" itemprop="dateCreated datePublished" datetime="2019-12-21T18:33:11+08:00">2019-12-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-04-13 21:08:23" itemprop="dateModified" datetime="2025-04-13T21:08:23+08:00">2025-04-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/NS3/" itemprop="url" rel="index"><span itemprop="name">NS3</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="NS3安装"><a href="#NS3安装" class="headerlink" title="NS3安装"></a>NS3安装</h2><p>最开始按照<a href="https://sss.cquzxy.top/2019/05/29/ns3-install-and-configration/">同学的blog</a>进行安装：</p>
+<h3 id="安装依赖库"><a href="#安装依赖库" class="headerlink" title="安装依赖库"></a>安装<a href="https://www.nsnam.org/wiki/Installation">依赖库</a></h3><ul>
+<li>更新apt</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装相关依赖</li>
+</ul>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gcc g++ python python-dev  #C++和python</span><br><span class="line"></span><br><span class="line">sudo apt-get install mercurial   #NS3代码维护使用的源码版本控制管理系统</span><br><span class="line">sudo apt-get install qt5-default mercurial</span><br><span class="line"></span><br><span class="line">sudo apt-get install bzr   #运行python绑定ns-<span class="number">3</span>-dev需要bazaar这个组件</span><br><span class="line">sudo apt-get install autoconf cvs unrar</span><br><span class="line"></span><br><span class="line">sudo apt-get install gdb valgrind   #调试工具</span><br><span class="line"></span><br><span class="line">sudo apt-get install gsl-bin libgsl-dev libgsl23 libgslcblas0   #支持更多精确WIFI模块的GNU Scientific Library (GSL) </span><br><span class="line"></span><br><span class="line">sudo apt-get install flex bison libfl-dev  #仿真必需的词法分析器和语法分析生成器</span><br><span class="line"></span><br><span class="line">sudo apt-get install g++-<span class="number">3</span>.<span class="number">4</span> gcc-<span class="number">3</span>.<span class="number">4</span>  #Network Simulation Cradle (nsc) stacks需要gcc-<span class="number">3</span>.<span class="number">4</span></span><br><span class="line"></span><br><span class="line">sudo apt-get install tcpdump   #读取pcap的packet traces</span><br><span class="line"></span><br><span class="line">sudo apt-get install sqlite sqlite3 libsqlite3-dev   #支持统计特性的数据库软件</span><br><span class="line"></span><br><span class="line">sudo apt-get install libxml2 libxml2-dev   #xml的配置存储软件</span><br><span class="line"></span><br><span class="line">sudo apt-get install libgtk2.<span class="number">0</span>-<span class="number">0</span> libgtk2.<span class="number">0</span>-dev   #基于GTK的配置系统</span><br><span class="line"></span><br><span class="line">sudo apt-get install vtun lxc   #在虚拟机and ns-<span class="number">3</span>上测试</span><br><span class="line"></span><br><span class="line">sudo apt-get install uncrustify   #代码风格检查程序</span><br><span class="line"></span><br><span class="line">sudo apt-get install doxygen graphviz imagemagick   #文档生成器</span><br><span class="line"></span><br><span class="line">sudo apt-get install texlive texlive-extra-utils texlive-latex-extra texlive-font-utils texlive-lang-portuguese dvipng latexmk</span><br><span class="line"></span><br><span class="line">sudo apt-get install python-sphinx dia</span><br><span class="line"></span><br><span class="line">sudo apt-get install python-pygraphviz python-kiwi python-pygoocanvas libgoocanvas-dev   #Gustavo’s ns-<span class="number">3</span>-pyviz的可视化软件</span><br><span class="line"></span><br><span class="line">sudo apt-get install libboost-signals-dev libboost-filesystem-dev  #支持openflow 模块</span><br><span class="line"></span><br><span class="line">sudo apt-get install openmpi-bin openmpi-common openmpi-doc libopenmpi-dev   #支持基于MPI的分布式仿真</span><br><span class="line"></span><br><span class="line">sudo apt-get install gir1.<span class="number">2</span>-goocanvas-<span class="number">2</span>.<span class="number">0</span> python-gi python-gi-cairo python-pygraphviz python3-gi python3-gi-cairo python3-pygraphviz gir1.<span class="number">2</span>-gtk-<span class="number">3</span>.<span class="number">0</span> ipython ipython3 </span><br><span class="line"></span><br><span class="line">sudo apt-get install cmake libc6-dev libc6-dev-i386 libclang-dev llvm-dev automake pip</span><br><span class="line">sudo pip install cxxfilt</span><br></pre></td></tr></table></figure>
+
+<p><em>在安装依赖的时候遇到一两个错误，根据提示进行了包的替换，有的则直接略过了，等到以后需要的时候再装。</em></p>
+<h3 id="安装NS3"><a href="#安装NS3" class="headerlink" title="安装NS3"></a>安装NS3</h3><ul>
+<li>安装NS3包括创建目录、进入目录、下载压缩包、解压</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://www.nsnam.org/release/ns-allinone-3.28.tar.bz2tar xjf ns-allinone-3.28.tar.bz2</span><br></pre></td></tr></table></figure>
+
+<h3 id="编译NS3"><a href="#编译NS3" class="headerlink" title="编译NS3"></a>编译NS3</h3><ul>
+<li><p>进入ns-allinone-3.28目录：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./build.py</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>进入ns-3.28目录：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./waf distclean #清除整个build目录./waf configure --build-profile=debug --enable-examples --enable-tests #打开debug并开启例子及帮助./waf build</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="测试并运行相关程序"><a href="#测试并运行相关程序" class="headerlink" title="测试并运行相关程序"></a>测试并运行相关程序</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./test.py -c core  #测试./waf --run hello-simulator  #运行hello-simulator程序</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="NS3配置"><a href="#NS3配置" class="headerlink" title="NS3配置"></a>NS3配置</h2><h3 id="下载Eclipse"><a href="#下载Eclipse" class="headerlink" title="下载Eclipse"></a>下载Eclipse</h3><p>第一次在eclipse中配置Mercurial的时候提示出错:（具体见<a href="https://stackoverflow.com/questions/51053807/mercurial-plugin-in-eclipse-cannot-satisfy-dependency-error">此</a>）</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cannot complete the install because one or <span class="built_in">more</span> required items could <span class="keyword">not</span> be found. Software currently installed: MercurialEclipse <span class="number">2</span>.<span class="number">5</span>.<span class="number">2</span>.<span class="number">201806082050</span> (mercurialeclipse.feature.group <span class="number">2</span>.<span class="number">5</span>.<span class="number">2</span>.<span class="number">201806082050</span>) Missing requirement: MercurialEclipse <span class="number">2</span>.<span class="number">5</span>.<span class="number">2</span>.<span class="number">201806082050</span> (com.vectrace.MercurialEclipse <span class="number">2</span>.<span class="number">5</span>.<span class="number">2</span>.<span class="number">201806082050</span>) requires &#x27;bundle org.eclipse.jface.text <span class="number">3</span>.<span class="number">11</span>.<span class="number">0</span>&#x27; but it could <span class="keyword">not</span> be found Cannot satisfy dependency: From: MercurialEclipse <span class="number">2</span>.<span class="number">5</span>.<span class="number">2</span>.<span class="number">201806082050</span> (mercurialeclipse.feature.group <span class="number">2</span>.<span class="number">5</span>.<span class="number">2</span>.<span class="number">201806082050</span>) To: com.vectrace.MercurialEclipse [<span class="number">2</span>.<span class="number">5</span>.<span class="number">2</span>.<span class="number">201806082050</span>]</span><br></pre></td></tr></table></figure>
+
+<p>原来是eclipse的版本问题，Mercurial在Eclipse Neon (4.6) 才第一次发布。</p>
+<p>所以重新安装了Eclipse的最新版本，安装教程参考<a href="https://blog.csdn.net/u012707739/article/details/78520308">此文</a>。</p>
+<h3 id="导入项目"><a href="#导入项目" class="headerlink" title="导入项目"></a>导入项目</h3><p>将NS3项目复制到eclipse的workspace，同时在eclipse中新建项目<code>File--New--C/C++Projec</code>, 项目名称与NS3项目名称相同。</p>
+<p><img src="/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/image-20200103105339513.png" alt="image-20200103105339513"></p>
+<p><img src="/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/image-20200103105418681.png" alt="image-20200103105418681"></p>
+<h3 id="用waf编译NS3项目"><a href="#用waf编译NS3项目" class="headerlink" title="用waf编译NS3项目"></a>用waf编译NS3项目</h3><p>（不知道这一步是不是必要的）</p>
+<p>在该项目中找到waf文件所在文件夹目录，在该目录中打开终端，依次敲以下命令。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./waf configure</span><br><span class="line">./waf clean</span><br><span class="line">./waf build</span><br></pre></td></tr></table></figure>
+
+<p><em>注：若显示无权限 则在以下界面打开终端，输入 sudo chmod 777 ns-XX —R</em></p>
+<h3 id="Eclipse-中-设置NS3-编译器为-waf"><a href="#Eclipse-中-设置NS3-编译器为-waf" class="headerlink" title="Eclipse 中 设置NS3 编译器为 waf"></a>Eclipse 中 设置NS3 编译器为 waf</h3><p>在 Project Explorer 中的 NS3 上单击右键,选择 properties，配置如图所示</p>
+<p><img src="/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/image-20200103112510368.png" alt="image-20200103112510368"></p>
+<h3 id="配置Eclipse-执行程序使用外部工具"><a href="#配置Eclipse-执行程序使用外部工具" class="headerlink" title="配置Eclipse 执行程序使用外部工具"></a>配置Eclipse 执行程序使用外部工具</h3><p>Run-&gt;External Tools-&gt;External tools Configuration，配置如下</p>
+<p><img src="/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/image-20200103111208090.png" alt="image-20200103111208090"></p>
+<h3 id="配置Debug"><a href="#配置Debug" class="headerlink" title="配置Debug"></a>配置Debug</h3><p>置Debug时 C&#x2F;C++Application处的文件路径要精确到需要Debug的c++文件名</p>
+<p><img src="/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/image-20200103112438631.png" alt="image-20200103112438631"></p>
+<p>然后选择Environment 进行配置</p>
+<p><img src="/2019/12/21/NS3/ubuntu16-04%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AENS3/image-20200103112429090.png" alt="image-20200103112429090"></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"># 教程</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/12/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/1108-Defanging-an-IP-Address/" rel="prev" title="1108. Defanging an IP Address">
+                  <i class="fa fa-angle-left"></i> 1108. Defanging an IP Address
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/12/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/771-Jewels-and-Stones/" rel="next" title="771. Jewels and Stones">
+                  771. Jewels and Stones <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">ciel</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

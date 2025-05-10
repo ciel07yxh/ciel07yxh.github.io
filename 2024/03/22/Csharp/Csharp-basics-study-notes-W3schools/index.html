@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ciel07yxh.top","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.23.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="ReferenceC# Tutorial (C Sharp) (w3schools.com) Get started C# is an object-oriented programming language created by Microsoft that runs on the .NET Framework.  The first version was released in year 2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Csharp basics study notes - W3schools">
+<meta property="og:url" content="http://blog.ciel07yxh.top/2024/03/22/Csharp/Csharp-basics-study-notes-W3schools/index.html">
+<meta property="og:site_name" content="Ciel&#39;s blog">
+<meta property="og:description" content="ReferenceC# Tutorial (C Sharp) (w3schools.com) Get started C# is an object-oriented programming language created by Microsoft that runs on the .NET Framework.  The first version was released in year 2">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://blog.ciel07yxh.top/2024/03/22/Csharp/Csharp-basics-study-notes-W3schools/C%23&dotNET/C%23%20basics%20notes%20-%20W3schools/col-row.png">
+<meta property="article:published_time" content="2024-03-22T09:43:47.000Z">
+<meta property="article:modified_time" content="2025-04-13T13:08:22.964Z">
+<meta property="article:author" content="ciel">
+<meta property="article:tag" content="programming">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.ciel07yxh.top/2024/03/22/Csharp/Csharp-basics-study-notes-W3schools/C%23&dotNET/C%23%20basics%20notes%20-%20W3schools/col-row.png">
+
+
+<link rel="canonical" href="http://blog.ciel07yxh.top/2024/03/22/Csharp/Csharp-basics-study-notes-W3schools/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://blog.ciel07yxh.top/2024/03/22/Csharp/Csharp-basics-study-notes-W3schools/","path":"2024/03/22/Csharp/Csharp-basics-study-notes-W3schools/","title":"Csharp basics study notes - W3schools"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Csharp basics study notes - W3schools | Ciel's blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Ciel's blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hi, this is Ciel!</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number">1.</span> <span class="nav-text">Reference</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Get-started"><span class="nav-number">2.</span> <span class="nav-text">Get started</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-Syntax"><span class="nav-number">3.</span> <span class="nav-text">C# Syntax</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-Methods"><span class="nav-number">4.</span> <span class="nav-text">C# Methods</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Method-Overloading-%E9%87%8D%E8%BD%BD"><span class="nav-number">4.1.</span> <span class="nav-text">Method Overloading 重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Method-Overriding-%E9%87%8D%E5%86%99"><span class="nav-number">4.2.</span> <span class="nav-text">Method Overriding 重写</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-Classes"><span class="nav-number">5.</span> <span class="nav-text">C# Classes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Using-Multiple-Classes"><span class="nav-number">5.1.</span> <span class="nav-text">Using Multiple Classes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Class-members"><span class="nav-number">5.2.</span> <span class="nav-text">Class members</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Constructors-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-number">5.3.</span> <span class="nav-text">Constructors 构造函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Access-Modifiers"><span class="nav-number">5.4.</span> <span class="nav-text">Access Modifiers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Properties-Get-and-Set"><span class="nav-number">5.5.</span> <span class="nav-text">Properties (Get and Set)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Inheritance"><span class="nav-number">5.6.</span> <span class="nav-text">Inheritance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Polymorphism-%E5%A4%9A%E6%80%81-override"><span class="nav-number">5.7.</span> <span class="nav-text">Polymorphism 多态 (override)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Abstraction"><span class="nav-number">5.8.</span> <span class="nav-text">Abstraction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Interface"><span class="nav-number">5.9.</span> <span class="nav-text">Interface</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Enum-enumerations-%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B"><span class="nav-number">5.10.</span> <span class="nav-text">Enum (enumerations) 枚举类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Files"><span class="nav-number">5.11.</span> <span class="nav-text">Files</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Exceptions-Try-Catch"><span class="nav-number">5.12.</span> <span class="nav-text">Exceptions - Try..Catch</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ciel</p>
+  <div class="site-description" itemprop="description">在这里记录我的学习 grit！</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://blog.ciel07yxh.top/2024/03/22/Csharp/Csharp-basics-study-notes-W3schools/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ciel">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ciel's blog">
+      <meta itemprop="description" content="在这里记录我的学习 grit！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Csharp basics study notes - W3schools | Ciel's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Csharp basics study notes - W3schools
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-03-22 17:43:47" itemprop="dateCreated datePublished" datetime="2024-03-22T17:43:47+08:00">2024-03-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-04-13 21:08:22" itemprop="dateModified" datetime="2025-04-13T21:08:22+08:00">2025-04-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C#</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.w3schools.com/cs/index.php">C# Tutorial (C Sharp) (w3schools.com)</a></p>
+<h1 id="Get-started"><a href="#Get-started" class="headerlink" title="Get started"></a>Get started</h1><ul>
+<li><p>C# is an object-oriented programming language created by Microsoft that runs on the .NET Framework.</p>
+</li>
+<li><p>The first version was released in year 2002. The latest version, <strong>C# 12</strong>, was released in November 2023.</p>
+</li>
+<li><p>两种运行cs程序的方式：</p>
+<ol>
+<li><p>VS 中</p>
+<p>How to run C# project: <a href="https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/run-program?view=vs-2022">How to run a program (C#) - Visual Studio (Windows) | Microsoft Learn</a></p>
+</li>
+<li><p>csproj 目录下运行<code>dotnet run</code></p>
+<p>How to run C# project in VS Code: [How to Run C# in VSCode (and Compile, Debug, and Create a Project) (travis.media)](<a href="https://travis.media/how-to-run-csharp-in-vscode/#:~:text=How">https://travis.media/how-to-run-csharp-in-vscode/#:~:text=How</a> to Run C%23 in VSCode 1 1.,Your Code To compile your code%2C run%3A )</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create a C# project</span></span><br><span class="line">dotnet new console <span class="literal">-o</span> app</span><br><span class="line"><span class="built_in">cd</span> app</span><br><span class="line">code . <span class="comment"># to open project in VSCode</span></span><br><span class="line"><span class="comment"># run </span></span><br><span class="line">dotnote run</span><br><span class="line"><span class="comment"># generate executable file</span></span><br><span class="line">dotnet buid</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<h1 id="C-Syntax"><a href="#C-Syntax" class="headerlink" title="C# Syntax"></a>C# Syntax</h1><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">HelloWorld</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">      Console.WriteLine(<span class="string">&quot;Hello World!&quot;</span>);    </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>using System</code> means that we can use classes from the <code>System</code> namespace.</p>
+</li>
+<li><p><code>namespace</code> is used to organize your code, and it is a container for classes and other namespaces.</p>
+</li>
+<li><p><code>class</code> is a container for data and methods, which brings functionality to your program. Every line of code that runs in C# must be inside a class. In our example, we named the class Program.</p>
+</li>
+<li><p><code>Console</code> is a class of the <code>System</code> namespace, which has a <code>WriteLine()</code> method that is used to output&#x2F;print text. In our example, it will output “Hello World!”.</p>
+<p>If you omit the <code>using System</code> line, you would have to write <code>System.Console.WriteLine()</code> to print&#x2F;output text.</p>
+</li>
+<li><p>Unlike <a href="https://www.w3schools.com/java/default.asp">Java</a>, the name of the C# file does not have to match the class name, but they often do (for better organization).</p>
+</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ========== Output ==========</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line"><span class="comment">// no new line</span></span><br><span class="line">Console.Write(<span class="string">&quot;Hello World! &quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// ========== Variables ==========</span></span><br><span class="line"><span class="comment">// variable types</span></span><br><span class="line"><span class="built_in">int</span> myNum = <span class="number">5</span>;               <span class="comment">// Integer (whole number)</span></span><br><span class="line"><span class="built_in">double</span> myDoubleNum = <span class="number">5.99</span>D;  <span class="comment">// Floating point number</span></span><br><span class="line"><span class="built_in">char</span> myLetter = <span class="string">&#x27;D&#x27;</span>;         <span class="comment">// Character</span></span><br><span class="line"><span class="built_in">bool</span> myBool = <span class="literal">true</span>;          <span class="comment">// Boolean</span></span><br><span class="line"><span class="built_in">string</span> myText = <span class="string">&quot;Hello&quot;</span>;     <span class="comment">// String</span></span><br><span class="line"><span class="comment">// assign value later</span></span><br><span class="line"><span class="built_in">int</span> myNum;</span><br><span class="line">myNum = <span class="number">15</span>;</span><br><span class="line"><span class="comment">/* If you don&#x27;t want others (or yourself) to overwrite existing values, you can add the const keyword in front of the variable type.*/</span></span><br><span class="line"><span class="comment">// A const field requires a value to be provided.</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> myNum = <span class="number">15</span>;</span><br><span class="line"><span class="comment">// To combine both text and a variable, use the + character:</span></span><br><span class="line"><span class="built_in">string</span> name = <span class="string">&quot;John&quot;</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;Hello &quot;</span> + name);</span><br><span class="line"><span class="comment">// numeric values</span></span><br><span class="line"><span class="built_in">int</span> x = <span class="number">5</span>;</span><br><span class="line"><span class="built_in">int</span> y = <span class="number">6</span>;</span><br><span class="line">Console.WriteLine(x + y); <span class="comment">// Print the value of x + y</span></span><br><span class="line"><span class="comment">// To declare more than one variable of the same type, use a comma-separated list:</span></span><br><span class="line"><span class="built_in">int</span> x = <span class="number">5</span>, y = <span class="number">6</span>, z = <span class="number">50</span>;</span><br><span class="line"><span class="comment">// or </span></span><br><span class="line"><span class="built_in">int</span> x, y, z;</span><br><span class="line">x = y = z = <span class="number">50</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ========== Data Types ==========</span></span><br><span class="line"><span class="comment">// Which type you should use, depends on the numeric value.</span></span><br><span class="line"><span class="comment">// Note that you should end the value with an &quot;L&quot;:</span></span><br><span class="line"><span class="built_in">long</span> myNum = <span class="number">15000000000L</span>;</span><br><span class="line"><span class="comment">// Note that you should end the value with an &quot;F&quot; for floats and &quot;D&quot; for doubles:</span></span><br><span class="line"><span class="built_in">float</span> myNum = <span class="number">5.75F</span>;</span><br><span class="line"><span class="built_in">double</span> myNum = <span class="number">19.99</span>D;</span><br><span class="line"><span class="comment">// Scientific Numbers</span></span><br><span class="line"><span class="built_in">float</span> f1 = <span class="number">35e3</span>F;</span><br><span class="line"><span class="built_in">double</span> d1 = <span class="number">12E4</span>D;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">Data Type</th>
+<th align="left">Size</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>int</code></td>
+<td align="left">4 bytes</td>
+<td align="left">Stores whole numbers from -2,147,483,648 to 2,147,483,647</td>
+</tr>
+<tr>
+<td align="left"><code>long</code></td>
+<td align="left">8 bytes</td>
+<td align="left">Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+</tr>
+<tr>
+<td align="left"><code>float</code></td>
+<td align="left">4 bytes</td>
+<td align="left">Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits</td>
+</tr>
+<tr>
+<td align="left"><code>double</code></td>
+<td align="left">8 bytes</td>
+<td align="left">Stores fractional numbers. Sufficient for storing 15 decimal digits</td>
+</tr>
+<tr>
+<td align="left"><code>bool</code></td>
+<td align="left">1 bit</td>
+<td align="left">Stores true or false values</td>
+</tr>
+<tr>
+<td align="left"><code>char</code></td>
+<td align="left">2 bytes</td>
+<td align="left">Stores a single character&#x2F;letter, surrounded by single quotes</td>
+</tr>
+<tr>
+<td align="left"><code>string</code></td>
+<td align="left">2 bytes per character</td>
+<td align="left">Stores a sequence of characters, surrounded by double quotes</td>
+</tr>
+</tbody></table>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ========== Type Casting ==========</span></span><br><span class="line"><span class="comment">// Implicit Casting (automatically) - converting a smaller type to a larger type size:</span></span><br><span class="line"><span class="built_in">char</span> -&gt; <span class="built_in">int</span> -&gt; <span class="built_in">long</span> -&gt; <span class="built_in">float</span> -&gt; <span class="built_in">double</span></span><br><span class="line"><span class="comment">// Explicit Casting (manually) - converting a larger type to a smaller size type</span></span><br><span class="line"><span class="built_in">double</span> -&gt; <span class="built_in">float</span> -&gt; <span class="built_in">long</span> -&gt; <span class="built_in">int</span> -&gt; <span class="built_in">char</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">double</span> myDouble = <span class="number">9.78</span>;</span><br><span class="line"><span class="built_in">int</span> myInt = (<span class="built_in">int</span>) myDouble; </span><br><span class="line"></span><br><span class="line"><span class="comment">// Type Conversion Methods</span></span><br><span class="line"><span class="comment">// It is also possible to convert data types explicitly by using built-in methods, such as Convert.ToBoolean, Convert.ToDouble, Convert.ToString, Convert.ToInt32 (int) and Convert.ToInt64 (long):</span></span><br><span class="line"><span class="built_in">int</span> myInt = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">double</span> myDouble = <span class="number">5.25</span>;</span><br><span class="line"><span class="built_in">bool</span> myBool = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">Console.WriteLine(Convert.ToString(myInt));    <span class="comment">// convert int to string</span></span><br><span class="line">Console.WriteLine(Convert.ToDouble(myInt));    <span class="comment">// convert int to double</span></span><br><span class="line">Console.WriteLine(Convert.ToInt32(myDouble));  <span class="comment">// convert double to int</span></span><br><span class="line">Console.WriteLine(Convert.ToString(myBool));   <span class="comment">// convert bool to string</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ========== Input ==========</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;Enter your age:&quot;</span>);</span><br><span class="line"><span class="built_in">int</span> age = Convert.ToInt32(Console.ReadLine());</span><br><span class="line">Console.WriteLine(<span class="string">&quot;Your age is: &quot;</span> + age);</span><br><span class="line"></span><br><span class="line"><span class="comment">// ========== Operators ==========</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">Operator</th>
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">+</td>
+<td align="left">Addition</td>
+<td align="left">Adds together two values</td>
+<td align="left">x + y</td>
+</tr>
+<tr>
+<td align="left">-</td>
+<td align="left">Subtraction</td>
+<td align="left">Subtracts one value from another</td>
+<td align="left">x - y</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">Multiplication</td>
+<td align="left">Multiplies two values</td>
+<td align="left">x * y</td>
+</tr>
+<tr>
+<td align="left">&#x2F;</td>
+<td align="left">Division</td>
+<td align="left">Divides one value by another</td>
+<td align="left">x &#x2F; y</td>
+</tr>
+<tr>
+<td align="left">%</td>
+<td align="left">Modulus</td>
+<td align="left">Returns the division remainder</td>
+<td align="left">x % y</td>
+</tr>
+<tr>
+<td align="left">++</td>
+<td align="left">Increment</td>
+<td align="left">Increases the value of a variable by 1</td>
+<td align="left">x++</td>
+</tr>
+<tr>
+<td align="left">–</td>
+<td align="left">Decrement</td>
+<td align="left">Decreases the value of a variable by 1</td>
+<td align="left">x–</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Operator</th>
+<th align="left">Example</th>
+<th align="left">Same As</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&#x3D;</td>
+<td align="left">x &#x3D; 5</td>
+<td align="left">x &#x3D; 5</td>
+</tr>
+<tr>
+<td align="left">+&#x3D;</td>
+<td align="left">x +&#x3D; 3</td>
+<td align="left">x &#x3D; x + 3</td>
+</tr>
+<tr>
+<td align="left">-&#x3D;</td>
+<td align="left">x -&#x3D; 3</td>
+<td align="left">x &#x3D; x - 3</td>
+</tr>
+<tr>
+<td align="left">*&#x3D;</td>
+<td align="left">x *&#x3D; 3</td>
+<td align="left">x &#x3D; x * 3</td>
+</tr>
+<tr>
+<td align="left">&#x2F;&#x3D;</td>
+<td align="left">x &#x2F;&#x3D; 3</td>
+<td align="left">x &#x3D; x &#x2F; 3</td>
+</tr>
+<tr>
+<td align="left">%&#x3D;</td>
+<td align="left">x %&#x3D; 3</td>
+<td align="left">x &#x3D; x % 3</td>
+</tr>
+<tr>
+<td align="left">&amp;&#x3D;</td>
+<td align="left">x &amp;&#x3D; 3</td>
+<td align="left">x &#x3D; x &amp; 3</td>
+</tr>
+<tr>
+<td align="left"><strong>|&#x3D;</strong></td>
+<td align="left"><strong>x |&#x3D; 3</strong></td>
+<td align="left"><strong>x &#x3D; x | 3</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>^&#x3D;</strong></td>
+<td align="left"><strong>x ^&#x3D; 3</strong></td>
+<td align="left"><strong>x &#x3D; x ^ 3</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>&gt;&gt;&#x3D;</strong></td>
+<td align="left"><strong>x &gt;&gt;&#x3D; 3 (移位，&#x2F;2)</strong></td>
+<td align="left"><strong>x &#x3D; x &gt;&gt; 3</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>&lt;&lt;&#x3D;</strong></td>
+<td align="left">*<em>x &lt;&lt;&#x3D; 3 (移位，<em>2)</em></em></td>
+<td align="left"><strong>x &#x3D; x &lt;&lt; 3</strong></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Operator</th>
+<th align="left">Name</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&#x3D;&#x3D;</td>
+<td align="left">Equal to</td>
+<td align="left">x &#x3D;&#x3D; y</td>
+</tr>
+<tr>
+<td align="left">!&#x3D;</td>
+<td align="left">Not equal</td>
+<td align="left">x !&#x3D; y</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">Greater than</td>
+<td align="left">x &gt; y</td>
+</tr>
+<tr>
+<td align="left">&lt;</td>
+<td align="left">Less than</td>
+<td align="left">x &lt; y</td>
+</tr>
+<tr>
+<td align="left">&gt;&#x3D;</td>
+<td align="left">Greater than or equal to</td>
+<td align="left">x &gt;&#x3D; y</td>
+</tr>
+<tr>
+<td align="left">&lt;&#x3D;</td>
+<td align="left">Less than or equal to</td>
+<td align="left">x &lt;&#x3D; y</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Operator</th>
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&amp;&amp;</td>
+<td align="left">Logical and</td>
+<td align="left">Returns True if both statements are true</td>
+<td align="left">x &lt; 5 &amp;&amp; x &lt; 10</td>
+</tr>
+<tr>
+<td align="left">||</td>
+<td align="left">Logical or</td>
+<td align="left">Returns True if one of the statements is true</td>
+<td align="left">x &lt; 5 || x &lt; 4</td>
+</tr>
+<tr>
+<td align="left">!</td>
+<td align="left">Logical not</td>
+<td align="left">Reverse the result, returns False if the result is true</td>
+<td align="left">!(x &lt; 5 &amp;&amp; x &lt; 10)</td>
+</tr>
+</tbody></table>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ========== Math ==========</span></span><br><span class="line">Math.Max(<span class="number">5</span>, <span class="number">10</span>);</span><br><span class="line">Math.Min(<span class="number">5</span>, <span class="number">10</span>);</span><br><span class="line">Math.Sqrt(<span class="number">64</span>);</span><br><span class="line">Math.Abs(<span class="number">-4.7</span>);</span><br><span class="line">Math.Round(<span class="number">9.99</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// ========== Strings ==========</span></span><br><span class="line"><span class="built_in">string</span> txt = <span class="string">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;The length of the txt string is: &quot;</span> + txt.Length);</span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> txt = <span class="string">&quot;Hello World&quot;</span>;</span><br><span class="line">Console.WriteLine(txt.ToUpper());   <span class="comment">// Outputs &quot;HELLO WORLD&quot;</span></span><br><span class="line">Console.WriteLine(txt.ToLower());   <span class="comment">// Outputs &quot;hello world&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Concatenation</span></span><br><span class="line"><span class="built_in">string</span> firstName = <span class="string">&quot;John &quot;</span>;</span><br><span class="line"><span class="built_in">string</span> lastName = <span class="string">&quot;Doe&quot;</span>;</span><br><span class="line"><span class="built_in">string</span> name = firstName + lastName;</span><br><span class="line"><span class="comment">// string name = string.Concat(firstName, lastName);</span></span><br><span class="line">Console.WriteLine(name);</span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> x = <span class="string">&quot;10&quot;</span>;</span><br><span class="line"><span class="built_in">string</span> y = <span class="string">&quot;20&quot;</span>;</span><br><span class="line"><span class="built_in">string</span> z = x + y;  <span class="comment">// z will be 1020 (a string)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Interpolation</span></span><br><span class="line"><span class="comment">// note that you have to use the dollar sign ($) when using the string interpolation method.</span></span><br><span class="line"><span class="built_in">string</span> firstName = <span class="string">&quot;John&quot;</span>;</span><br><span class="line"><span class="built_in">string</span> lastName = <span class="string">&quot;Doe&quot;</span>;</span><br><span class="line"><span class="built_in">string</span> name = <span class="string">$&quot;My full name is: <span class="subst">&#123;firstName&#125;</span> <span class="subst">&#123;lastName&#125;</span>&quot;</span>;</span><br><span class="line">Console.WriteLine(name);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Access Strings</span></span><br><span class="line"><span class="built_in">string</span> myString = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">Console.WriteLine(myString[<span class="number">0</span>]);  <span class="comment">// Outputs &quot;H&quot;</span></span><br><span class="line">Console.WriteLine(myString.IndexOf(<span class="string">&quot;e&quot;</span>));  <span class="comment">// Outputs &quot;1&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Full name</span></span><br><span class="line"><span class="built_in">string</span> name = <span class="string">&quot;John Doe&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Location of the letter D</span></span><br><span class="line"><span class="built_in">int</span> charPos = name.IndexOf(<span class="string">&quot;D&quot;</span>);</span><br><span class="line"><span class="comment">// Get last name</span></span><br><span class="line"><span class="built_in">string</span> lastName = name.Substring(charPos);</span><br><span class="line"><span class="comment">// Print the result</span></span><br><span class="line">Console.WriteLine(lastName);</span><br><span class="line"><span class="comment">// Special Characters</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">Escape character</th>
+<th align="left">Result</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&#39;</td>
+<td align="left">‘</td>
+<td align="left">Single quote</td>
+</tr>
+<tr>
+<td align="left">&quot;</td>
+<td align="left">“</td>
+<td align="left">Double quote</td>
+</tr>
+<tr>
+<td align="left">\</td>
+<td align="left">\</td>
+<td align="left">Backslash</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">\n</td>
+<td align="left">New Line</td>
+</tr>
+<tr>
+<td align="left">\t</td>
+<td align="left">Tab</td>
+</tr>
+<tr>
+<td align="left">\b</td>
+<td align="left">Backspace</td>
+</tr>
+</tbody></table>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ========== IF...Else ==========</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Use if to specify a block of code to be executed, if a specified condition is true</span></span><br><span class="line"><span class="comment">Use else to specify a block of code to be executed, if the same condition is false</span></span><br><span class="line"><span class="comment">Use else if to specify a new condition to test, if the first condition is false</span></span><br><span class="line"><span class="comment">Use switch to specify many alternative blocks of code to be executed</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">if</span> (condition1)</span><br><span class="line">&#123;</span><br><span class="line">  <span class="comment">// block of code to be executed if condition1 is True</span></span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (condition2) </span><br><span class="line">&#123;</span><br><span class="line">  <span class="comment">// block of code to be executed if the condition1 is false and condition2 is True</span></span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="comment">// block of code to be executed if the condition1 is false and condition2 is False</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// short hand if-else</span></span><br><span class="line"><span class="built_in">int</span> time = <span class="number">20</span>;</span><br><span class="line"><span class="built_in">string</span> result = (time &lt; <span class="number">18</span>) ? <span class="string">&quot;Good day.&quot;</span> : <span class="string">&quot;Good evening.&quot;</span>; </span><br><span class="line">Console.WriteLine(result); </span><br><span class="line"></span><br><span class="line"><span class="comment">// ========== Switch ==========</span></span><br><span class="line"><span class="keyword">switch</span>(expression) </span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">case</span> x:</span><br><span class="line">    <span class="comment">// code block</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> y:</span><br><span class="line">    <span class="comment">// code block</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="comment">// The default keyword is optional and specifies some code to run if there is no case match:</span></span><br><span class="line">  <span class="literal">default</span>:</span><br><span class="line">    <span class="comment">// code block</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ========== While ==========</span></span><br><span class="line"><span class="keyword">while</span> (condition) </span><br><span class="line">&#123;</span><br><span class="line">  <span class="comment">// code block to be executed</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// This loop will execute the code block once, before checking if the condition is true</span></span><br><span class="line"><span class="keyword">do</span> </span><br><span class="line">&#123;</span><br><span class="line">  <span class="comment">// code block to be executed</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">while</span> (condition);</span><br><span class="line"></span><br><span class="line"><span class="comment">// ========== For loop ==========</span></span><br><span class="line"><span class="comment">// Outer loop</span></span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">2</span>; ++i) </span><br><span class="line">&#123;</span><br><span class="line">  Console.WriteLine(<span class="string">&quot;Outer: &quot;</span> + i);  <span class="comment">// Executes 2 times</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// Inner loop</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="built_in">int</span> j = <span class="number">1</span>; j &lt;= <span class="number">3</span>; j++) </span><br><span class="line">  &#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot; Inner: &quot;</span> + j); <span class="comment">// Executes 6 times (2 * 3)</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Foreach Loop</span></span><br><span class="line"><span class="built_in">string</span>[] cars = &#123;<span class="string">&quot;Volvo&quot;</span>, <span class="string">&quot;BMW&quot;</span>, <span class="string">&quot;Ford&quot;</span>, <span class="string">&quot;Mazda&quot;</span>&#125;;</span><br><span class="line"><span class="keyword">foreach</span> (<span class="built_in">string</span> i <span class="keyword">in</span> cars) </span><br><span class="line">&#123;</span><br><span class="line">  Console.WriteLine(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ========== Break and Continue ==========</span></span><br><span class="line"><span class="comment">// The break statement can also be used to jump out of a loop.</span></span><br><span class="line"><span class="comment">// The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</span></span><br><span class="line"><span class="comment">// This example skips the value of 4:</span></span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) </span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">if</span> (i == <span class="number">4</span>) </span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">continue</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  Console.WriteLine(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ========== Arrays ==========</span></span><br><span class="line"><span class="built_in">string</span>[] cars = &#123;<span class="string">&quot;Volvo&quot;</span>, <span class="string">&quot;BMW&quot;</span>, <span class="string">&quot;Ford&quot;</span>, <span class="string">&quot;Mazda&quot;</span>&#125;;</span><br><span class="line">cars[<span class="number">0</span>] = <span class="string">&quot;Opel&quot;</span>;</span><br><span class="line">Console.WriteLine(cars[<span class="number">0</span>]);</span><br><span class="line"><span class="comment">// Now outputs Opel instead of Volvo</span></span><br><span class="line">Console.WriteLine(cars.Length);</span><br><span class="line"></span><br><span class="line"><span class="comment">// different ways to create an array</span></span><br><span class="line"><span class="comment">// Create an array of four elements, and add values later</span></span><br><span class="line"><span class="built_in">string</span>[] cars = <span class="keyword">new</span> <span class="built_in">string</span>[<span class="number">4</span>];</span><br><span class="line"><span class="comment">// Create an array of four elements and add values right away </span></span><br><span class="line"><span class="built_in">string</span>[] cars = <span class="keyword">new</span> <span class="built_in">string</span>[<span class="number">4</span>] &#123;<span class="string">&quot;Volvo&quot;</span>, <span class="string">&quot;BMW&quot;</span>, <span class="string">&quot;Ford&quot;</span>, <span class="string">&quot;Mazda&quot;</span>&#125;;</span><br><span class="line"><span class="comment">// Create an array of four elements without specifying the size </span></span><br><span class="line"><span class="built_in">string</span>[] cars = <span class="keyword">new</span> <span class="built_in">string</span>[] &#123;<span class="string">&quot;Volvo&quot;</span>, <span class="string">&quot;BMW&quot;</span>, <span class="string">&quot;Ford&quot;</span>, <span class="string">&quot;Mazda&quot;</span>&#125;;</span><br><span class="line"><span class="comment">// Create an array of four elements, omitting the new keyword, and without specifying the size</span></span><br><span class="line"><span class="comment">// we will often use the last option, as it is faster and easier to read.</span></span><br><span class="line"><span class="built_in">string</span>[] cars = &#123;<span class="string">&quot;Volvo&quot;</span>, <span class="string">&quot;BMW&quot;</span>, <span class="string">&quot;Ford&quot;</span>, <span class="string">&quot;Mazda&quot;</span>&#125;;</span><br><span class="line"><span class="comment">// However, you should note that if you declare an array and initialize it later, you have to use the new keyword</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Loop Through Arrays</span></span><br><span class="line"><span class="built_in">string</span>[] cars = &#123;<span class="string">&quot;Volvo&quot;</span>, <span class="string">&quot;BMW&quot;</span>, <span class="string">&quot;Ford&quot;</span>, <span class="string">&quot;Mazda&quot;</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; cars.Length; i++) </span><br><span class="line">&#123;</span><br><span class="line">  Console.WriteLine(cars[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">foreach</span> (<span class="built_in">string</span> i <span class="keyword">in</span> cars) </span><br><span class="line">&#123;</span><br><span class="line">  Console.WriteLine(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Sort a string</span></span><br><span class="line"><span class="built_in">string</span>[] cars = &#123;<span class="string">&quot;Volvo&quot;</span>, <span class="string">&quot;BMW&quot;</span>, <span class="string">&quot;Ford&quot;</span>, <span class="string">&quot;Mazda&quot;</span>&#125;;</span><br><span class="line">Array.Sort(cars);</span><br><span class="line"><span class="keyword">foreach</span> (<span class="built_in">string</span> i <span class="keyword">in</span> cars)</span><br><span class="line">&#123;</span><br><span class="line">  Console.WriteLine(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">int</span>[] myNumbers = &#123;<span class="number">5</span>, <span class="number">1</span>, <span class="number">8</span>, <span class="number">9</span>&#125;;</span><br><span class="line">Console.WriteLine(myNumbers.Max());  <span class="comment">// returns the largest value</span></span><br><span class="line">Console.WriteLine(myNumbers.Min());  <span class="comment">// returns the smallest value</span></span><br><span class="line">Console.WriteLine(myNumbers.Sum());  <span class="comment">// returns the sum of elements</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Multidimensional Arrays</span></span><br><span class="line"><span class="built_in">int</span>[,] numbers = &#123; &#123;<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>&#125;, &#123;<span class="number">3</span>, <span class="number">6</span>, <span class="number">8</span>&#125; &#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// access</span></span><br><span class="line"><span class="built_in">int</span>[,] numbers = &#123; &#123;<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>&#125;, &#123;<span class="number">3</span>, <span class="number">6</span>, <span class="number">8</span>&#125; &#125;;</span><br><span class="line">Console.WriteLine(numbers[<span class="number">0</span>, <span class="number">2</span>]);  <span class="comment">// Outputs 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// note that we have to use GetLength() instead of Length to specify how many times the loop should run</span></span><br><span class="line"><span class="built_in">int</span>[,] numbers = &#123; &#123;<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>&#125;, &#123;<span class="number">3</span>, <span class="number">6</span>, <span class="number">8</span>&#125; &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; numbers.GetLength(<span class="number">0</span>); i++) </span><br><span class="line">&#123; </span><br><span class="line">  <span class="keyword">for</span> (<span class="built_in">int</span> j = <span class="number">0</span>; j &lt; numbers.GetLength(<span class="number">1</span>); j++) </span><br><span class="line">  &#123; </span><br><span class="line">    Console.WriteLine(numbers[i, j]); </span><br><span class="line">  &#125; </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<img src="/2024/03/22/Csharp/Csharp-basics-study-notes-W3schools/C%23&dotNET/C%23 basics notes - W3schools/col-row.png" alt="img" style="zoom:50%;">
+
+
+
+
+
+<h1 id="C-Methods"><a href="#C-Methods" class="headerlink" title="C# Methods"></a>C# Methods</h1><p>A <strong>method</strong> is a block of code which only runs when it is called.</p>
+<p>You can pass data, known as parameters, into a method.</p>
+<p>Methods are used to perform certain actions, and they are also known as <strong>functions</strong>.</p>
+<p>Why use methods? To <strong>reuse</strong> code: define the code once, and use it many times.</p>
+<p>In C#, it is good practice to start with an <strong>uppercase</strong> letter when naming methods, as it makes the code easier to read.</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// It is also possible to send arguments with the key: value syntax.</span></span><br><span class="line"><span class="comment">// That way, the order of the arguments does not matter:</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">MyMethod</span>(<span class="params"><span class="built_in">string</span> child1, <span class="built_in">string</span> child2, <span class="built_in">string</span> child3</span>)</span> </span><br><span class="line">&#123;</span><br><span class="line">  Console.WriteLine(<span class="string">&quot;The youngest child is: &quot;</span> + child3);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  MyMethod(child3: <span class="string">&quot;John&quot;</span>, child1: <span class="string">&quot;Liam&quot;</span>, child2: <span class="string">&quot;Liam&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// The youngest child is: John</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Method-Overloading-重载"><a href="#Method-Overloading-重载" class="headerlink" title="Method Overloading 重载"></a>Method Overloading 重载</h2><p>With <strong>method overloading</strong>, multiple methods can have the same name with different parameters:</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Calculator</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">Add</span>(<span class="params"><span class="built_in">int</span> a, <span class="built_in">int</span> b</span>)</span> =&gt; a + b;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">Add</span>(<span class="params"><span class="built_in">int</span> a, <span class="built_in">int</span> b, <span class="built_in">int</span> c</span>)</span> =&gt; a + b +c;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">double</span> <span class="title">Add</span>(<span class="params"><span class="built_in">double</span> a, <span class="built_in">double</span> b</span>)</span> =&gt; a + b;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">double</span> <span class="title">Add</span>(<span class="params"><span class="built_in">double</span> a, <span class="built_in">double</span> b, <span class="built_in">double</span> c</span>)</span> =&gt; a + b + c;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>Multiple methods can have the same name as long as the <strong>number and&#x2F;or type</strong> of parameters are different.</p>
+<h2 id="Method-Overriding-重写"><a href="#Method-Overriding-重写" class="headerlink" title="Method Overriding 重写"></a>Method Overriding 重写</h2><blockquote>
+<p>notes is from <a href="https://hackernoon.com/overloading-vs-overriding-in-c-nn1331h4">Overloading Vs. Overriding in C# | HackerNoon</a></p>
+</blockquote>
+<p>Overriding, on the other hand, is the ability to redefine the implementation of a method in a class that inherits from a parent class. When a method is overridden, the name and the parameters stay the same, but the implementation that gets called depends on the type of the object that’s calling it.</p>
+<p>Overriding is known as runtime (or dynamic) polymorphism because the type of the calling object is not known until runtime, and therefore the method implementation that runs is determined at runtime.</p>
+<p>As an example, imagine we have a base class called Dog with a Woof method. We mark the method as virtual to signify that this method can be overriden by inheriting classes.</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Dog</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Woof</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;Woof!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Currently this and any inherited classes will use the Woof method defined in the Dog class:</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">BigDog</span> : <span class="title">Dog</span> </span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> dog = <span class="keyword">new</span> Dog();</span><br><span class="line"><span class="keyword">var</span> bigDog = <span class="keyword">new</span> BigDog();</span><br><span class="line"></span><br><span class="line">dog.Woof() <span class="comment">// prints Woof!</span></span><br><span class="line">bigDog.Woof() <span class="comment">// prints Woof!</span></span><br></pre></td></tr></table></figure>
+
+<p>However, we can choose to override the method so that our inherited classes have a different implementation of Woof:</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">YappyDog</span> : <span class="title">Dog</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Woof</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;Woof! Woof! Woof!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> dog = <span class="keyword">new</span> Dog();</span><br><span class="line"><span class="keyword">var</span> yappyDog = <span class="keyword">new</span> YappyDog();</span><br><span class="line"></span><br><span class="line">dog.Woof() <span class="comment">// prints Woof!</span></span><br><span class="line">yappyDog.Woof() <span class="comment">// prints Woof! Woof! Woof!</span></span><br></pre></td></tr></table></figure>
+
+<p>Here the base Dog class still uses it’s own implementation, but the inherited YappyDog has it’s own overridden implementation that it uses. The application checks at runtime what the type of the class is (Dog or YappyDog) and calls the method for that particular type.</p>
+<h1 id="C-Classes"><a href="#C-Classes" class="headerlink" title="C# Classes"></a>C# Classes</h1><p>A class is a template for objects, and an object is an instance of a class.</p>
+<p>When a variable is declared directly in a class, it is often referred to as a <strong>field</strong> (or attribute).</p>
+<p>It is not required, but it is a good practice to start with an uppercase first letter when naming classes. Also, it is common that <strong>the name of the C# file and the class matches</strong>, as it makes our code organized.</p>
+<h2 id="Using-Multiple-Classes"><a href="#Using-Multiple-Classes" class="headerlink" title="Using Multiple Classes"></a>Using Multiple Classes</h2><p>prog2.cs</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Car</span> </span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// public: access modifier</span></span><br><span class="line">  	<span class="keyword">public</span> <span class="built_in">string</span> color = <span class="string">&quot;red&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>prog.cs</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">  &#123;</span><br><span class="line">    Car myObj = <span class="keyword">new</span> Car();</span><br><span class="line">    Console.WriteLine(myObj.color);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Class-members"><a href="#Class-members" class="headerlink" title="Class members"></a>Class members</h2><p>Fields and methods inside classes are often referred to as “Class Members”.</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Car</span> </span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">string</span> color;                 <span class="comment">// field</span></span><br><span class="line">  <span class="built_in">int</span> maxSpeed;                 <span class="comment">// field</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fullThrottle</span>()    <span class="comment">// method</span></span></span><br><span class="line">  &#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;The car is going as fast as it can!&quot;</span>); </span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">  &#123;</span><br><span class="line">    Car myObj = <span class="keyword">new</span> Car();</span><br><span class="line">    myObj.fullThrottle();  <span class="comment">// Call the method</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>A <code>static</code> method can be accessed without creating an object of the class, while <code>public</code> methods can only be accessed by objects.</p>
+<h2 id="Constructors-构造函数"><a href="#Constructors-构造函数" class="headerlink" title="Constructors 构造函数"></a>Constructors 构造函数</h2><p>A constructor is a <strong>special method</strong> that is used to initialize objects. The advantage of a constructor, is that it is called when an object of a class is created. It can be used to set initial values for fields.</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create a Car class</span></span><br><span class="line"><span class="keyword">class</span> <span class="title">Car</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="built_in">string</span> model;  <span class="comment">// Create a field</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// Create a class constructor for the Car class</span></span><br><span class="line">  <span class="comment">// Note that the constructor name must match the class name, and it cannot have a return type (like void or int).</span></span><br><span class="line">  <span class="comment">// Create a class constructor with multiple parameters</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Car</span>(<span class="params"><span class="built_in">string</span> modelName, <span class="built_in">string</span> modelColor, <span class="built_in">int</span> modelYear</span>)</span></span><br><span class="line">  &#123;</span><br><span class="line">    model = modelName;</span><br><span class="line">    color = modelColor;</span><br><span class="line">    year = modelYear;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">  &#123;</span><br><span class="line">    Car Ford = <span class="keyword">new</span> Car();  <span class="comment">// Create an object of the Car Class (this will call the constructor)</span></span><br><span class="line">    Console.WriteLine(Ford.model);  <span class="comment">// Print the value of model</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Outputs &quot;Mustang&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>All classes have constructors by default: if you do not create a class constructor yourself, C# creates one for you. However, then you are not able to set initial values for fields.</p>
+<p>Just like other methods, constructors can be <strong>overloaded</strong> by using different numbers of parameters.</p>
+<h2 id="Access-Modifiers"><a href="#Access-Modifiers" class="headerlink" title="Access Modifiers"></a>Access Modifiers</h2><table>
+<thead>
+<tr>
+<th align="left">Modifier</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>public</code></td>
+<td align="left">The code is accessible for all classes</td>
+</tr>
+<tr>
+<td align="left"><code>private</code></td>
+<td align="left">The code is only accessible within the same class</td>
+</tr>
+<tr>
+<td align="left"><code>protected</code></td>
+<td align="left">The code is accessible within the same class, or in a class that is inherited from that class.</td>
+</tr>
+<tr>
+<td align="left"><code>internal</code></td>
+<td align="left">The code is only accessible within its own assembly, but not from another assembly.</td>
+</tr>
+</tbody></table>
+<p>There’s also two combinations: <code>protected internal</code> and <code>private protected</code>.</p>
+<p>By default, all members of a class are <code>private</code> if you don’t specify an access modifier</p>
+<p><strong><u>Why Access Modifiers?</u></strong></p>
+<p>To control the visibility of class members (the security level of each individual class and class member).</p>
+<p>To achieve “<strong>Encapsulation</strong>“ - which is the process of making sure that “sensitive” data is hidden from users. This is done by declaring fields as <code>private</code>. </p>
+<h2 id="Properties-Get-and-Set"><a href="#Properties-Get-and-Set" class="headerlink" title="Properties (Get and Set)"></a>Properties (Get and Set)</h2><p>The meaning of <strong>Encapsulation</strong>, is to make sure that “sensitive” data is hidden from users. To achieve this, you must:</p>
+<ul>
+<li>declare fields&#x2F;variables as <code>private</code></li>
+<li>provide <code>public</code> <code>get</code> and <code>set</code> methods, through <strong>properties</strong>, to access and update the value of a <code>private</code> field</li>
+</ul>
+<p>You learned from the previous chapter that <code>private</code> variables can only be accessed within the same class (an outside class has no access to it). However, sometimes we need to access them - and it can be done with properties.</p>
+<p>A property is like a combination of a variable and a method, and it has two methods: a <code>get</code> and a <code>set</code> method:</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Person</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="built_in">string</span> name; <span class="comment">// field</span></span><br><span class="line">  <span class="comment">// The Name property is associated with the name field. It is a good practice to use the same name for both the property and the private field, but with an uppercase first letter.</span></span><br><span class="line">  <span class="keyword">public</span> <span class="built_in">string</span> Name   <span class="comment">// property</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">get</span> &#123; <span class="keyword">return</span> name; &#125;</span><br><span class="line">    <span class="keyword">set</span> &#123; name = <span class="keyword">value</span>; &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">  &#123;</span><br><span class="line">    Person myObj = <span class="keyword">new</span> Person();</span><br><span class="line">    myObj.Name = <span class="string">&quot;Liam&quot;</span>;</span><br><span class="line">    Console.WriteLine(myObj.Name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Automatic Properties (Short Hand):</p>
+<p>C# also provides a way to use short-hand &#x2F; automatic properties, where you do not have to define the field for the property, and you only have to write <code>get;</code> and <code>set;</code> inside the property.</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Person</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="built_in">string</span> Name  <span class="comment">// property</span></span><br><span class="line">  &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">  &#123;</span><br><span class="line">    Person myObj = <span class="keyword">new</span> Person();</span><br><span class="line">    myObj.Name = <span class="string">&quot;Liam&quot;</span>;</span><br><span class="line">    Console.WriteLine(myObj.Name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><u>Why Encapsulation?</u></strong></p>
+<ul>
+<li>Better control of class members (reduce the possibility of yourself (or others) to mess up the code)</li>
+<li>Fields can be made <strong>read-only</strong> (if you only use the <code>get</code> method), or <strong>write-only</strong> (if you only use the <code>set</code> method)</li>
+<li>Flexible: the programmer can change one part of the code without affecting other parts</li>
+<li>Increased security of data</li>
+</ul>
+<h2 id="Inheritance"><a href="#Inheritance" class="headerlink" title="Inheritance"></a>Inheritance</h2><p>In C#, it is possible to inherit fields and methods from one class to another. We group the “inheritance concept” into two categories:</p>
+<ul>
+<li><strong>Derived Class</strong> (child) - the class that inherits from another class</li>
+<li><strong>Base Class</strong> (parent) - the class being inherited from</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Vehicle</span>  <span class="comment">// base class (parent) </span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="built_in">string</span> brand = <span class="string">&quot;Ford&quot;</span>;  <span class="comment">// Vehicle field</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">honk</span>()             <span class="comment">// Vehicle method </span></span></span><br><span class="line">  &#123;                    </span><br><span class="line">    Console.WriteLine(<span class="string">&quot;Tuut, tuut!&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Car</span> : <span class="title">Vehicle</span>  <span class="comment">// derived class (child)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="built_in">string</span> modelName = <span class="string">&quot;Mustang&quot;</span>;  <span class="comment">// Car field</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">// Create a myCar object</span></span><br><span class="line">    Car myCar = <span class="keyword">new</span> Car();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Call the honk() method (From the Vehicle class) on the myCar object</span></span><br><span class="line">    myCar.honk();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Display the value of the brand field (from the Vehicle class) and the value of the modelName from the Car class</span></span><br><span class="line">    Console.WriteLine(myCar.brand + <span class="string">&quot; &quot;</span> + myCar.modelName);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>If you don’t want other classes to inherit from a class, use the <code>sealed</code> keyword:</p>
+<p>If you try to access a <code>sealed</code> class, C# will generate an error:</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">Vehicle</span> </span><br><span class="line">&#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Car</span> : <span class="title">Vehicle</span> </span><br><span class="line">&#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The error message will be something like this:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;Car&#x27;: cannot derive from sealed type &#x27;Vehicle&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Polymorphism-多态-override"><a href="#Polymorphism-多态-override" class="headerlink" title="Polymorphism 多态 (override)"></a>Polymorphism 多态 (override)</h2><p><a href="https://www.w3schools.com/cs/cs_inheritance.php"><strong>Inheritance</strong></a> lets us inherit fields and methods from another class. <strong>Polymorphism</strong> uses those methods to perform different tasks. This allows us to perform a single action in different ways.</p>
+<p>For example, think of a base class called <code>Animal</code> that has a method called <code>animalSound()</code>. Derived classes of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.)</p>
+<p>C# provides an option to override the base class method, by adding the <code>virtual</code> keyword to the method inside the base class, and by using the <code>override</code> keyword for each derived class methods.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Animal</span>  <span class="comment">// Base class (parent) </span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">animalSound</span>()</span> </span><br><span class="line">  &#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;The animal makes a sound&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Pig</span> : <span class="title">Animal</span>  <span class="comment">// Derived class (child) </span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">animalSound</span>()</span> </span><br><span class="line">  &#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;The pig says: wee wee&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Dog</span> : <span class="title">Animal</span>  <span class="comment">// Derived class (child) </span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">animalSound</span>()</span> </span><br><span class="line">  &#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;The dog says: bow wow&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Program</span> </span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span> </span><br><span class="line">  &#123;</span><br><span class="line">    Animal myAnimal = <span class="keyword">new</span> Animal();  <span class="comment">// Create a Animal object</span></span><br><span class="line">    Animal myPig = <span class="keyword">new</span> Pig();  <span class="comment">// Create a Pig object</span></span><br><span class="line">    Animal myDog = <span class="keyword">new</span> Dog();  <span class="comment">// Create a Dog object</span></span><br><span class="line"></span><br><span class="line">    myAnimal.animalSound();</span><br><span class="line">    myPig.animalSound();</span><br><span class="line">    myDog.animalSound();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Abstraction"><a href="#Abstraction" class="headerlink" title="Abstraction"></a>Abstraction</h2><p>Data <strong>abstraction</strong> is the process of hiding certain details and showing only essential information to the user.<br>Abstraction can be achieved with either <strong>abstract classes</strong> or <a href="https://www.w3schools.com/cs/cs_interface.php"><strong>interfaces</strong></a>.</p>
+<p>The <code>abstract</code> keyword is used for classes and methods:</p>
+<ul>
+<li><strong>Abstract class:</strong> is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).</li>
+<li><strong>Abstract method:</strong> can only be used in an abstract class, and it does not have a body. The body is provided by the derived class (inherited from).</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Abstract class</span></span><br><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">Animal</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="comment">// Abstract method (does not have a body)</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">animalSound</span><span class="params">()</span>;</span><br><span class="line">  <span class="comment">// Regular method</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sleep</span><span class="params">()</span></span><br><span class="line">  &#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;Zzz&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Derived class (inherit from Animal)</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Pig</span> : Animal</span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">public</span> override <span class="keyword">void</span> <span class="title function_">animalSound</span><span class="params">()</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">// The body of animalSound() is provided here</span></span><br><span class="line">    Console.WriteLine(<span class="string">&quot;The pig says: wee wee&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Program</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">Main</span><span class="params">(string[] args)</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="type">Pig</span> <span class="variable">myPig</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Pig</span>(); <span class="comment">// Create a Pig object</span></span><br><span class="line">    myPig.animalSound();  <span class="comment">// Call the abstract method</span></span><br><span class="line">    myPig.sleep();  <span class="comment">// Call the regular method</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Interface"><a href="#Interface" class="headerlink" title="Interface"></a>Interface</h2><p>An <code>interface</code> is a completely “<strong>abstract class</strong>“, which can only contain abstract methods and properties (with empty bodies).</p>
+<p>It is considered good practice to start with the letter “I” at the beginning of an interface, as it makes it easier for yourself and others to remember that it is an interface and not a class.</p>
+<p>By default, members of an interface are <code>abstract</code> and <code>public</code>.</p>
+<p><strong>Note:</strong> Interfaces can contain properties and methods, but not fields.</p>
+<p>To access the interface methods, the interface must be “implemented” (kinda like inherited) by another class. </p>
+<p>Note that you do not have to use the <code>override</code> keyword when implementing an interface.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Interface</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">IAnimal</span> </span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">void</span> <span class="title function_">animalSound</span><span class="params">()</span>; <span class="comment">// interface method (does not have a body)</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Pig &quot;implements&quot; the IAnimal interface</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Pig</span> : IAnimal </span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">animalSound</span><span class="params">()</span> </span><br><span class="line">  &#123;</span><br><span class="line">    <span class="comment">// The body of animalSound() is provided here</span></span><br><span class="line">    Console.WriteLine(<span class="string">&quot;The pig says: wee wee&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Program</span> </span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">Main</span><span class="params">(string[] args)</span> </span><br><span class="line">  &#123;</span><br><span class="line">    <span class="type">Pig</span> <span class="variable">myPig</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Pig</span>();  <span class="comment">// Create a Pig object</span></span><br><span class="line">    myPig.animalSound();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><u>Notes on Interfaces:</u></strong></p>
+<ul>
+<li>Like <strong>abstract classes</strong>, interfaces <strong>cannot</strong> be used to create objects (in the example above, it is not possible to create an “IAnimal” object in the Program class)</li>
+<li>Interface methods do not have a body - the body is provided by the “implement” class</li>
+<li>On implementation of an interface, you must override all of its methods</li>
+<li>Interfaces can contain properties and methods, but not fields&#x2F;variables</li>
+<li>Interface members are by default <code>abstract</code> and <code>public</code></li>
+<li>An interface cannot contain a constructor (as it cannot be used to create objects)</li>
+</ul>
+<p><u><strong>Why And When To Use Interfaces?</strong></u></p>
+<ol>
+<li><p>To achieve security - hide certain details and only show the important details of an object (interface).</p>
+</li>
+<li><p>C# does not support “multiple inheritance” (a class can only inherit from one base class). However, it can be achieved with interfaces, because the class can <strong>implement</strong> multiple interfaces. <strong>Note:</strong> To implement multiple interfaces, separate them with a comma (see example below).</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">IFirstInterface</span> </span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">void</span> <span class="title function_">myMethod</span><span class="params">()</span>; <span class="comment">// interface method</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">ISecondInterface</span> </span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">void</span> <span class="title function_">myOtherMethod</span><span class="params">()</span>; <span class="comment">// interface method</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Implement multiple interfaces</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">DemoClass</span> : IFirstInterface, ISecondInterface </span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">myMethod</span><span class="params">()</span> </span><br><span class="line">  &#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;Some text..&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">myOtherMethod</span><span class="params">()</span> </span><br><span class="line">  &#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;Some other text...&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Program</span> </span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">Main</span><span class="params">(string[] args)</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="type">DemoClass</span> <span class="variable">myObj</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DemoClass</span>();</span><br><span class="line">    myObj.myMethod();</span><br><span class="line">    myObj.myOtherMethod();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Enum-enumerations-枚举类型"><a href="#Enum-enumerations-枚举类型" class="headerlink" title="Enum (enumerations) 枚举类型"></a>Enum (enumerations) 枚举类型</h2><p>An <code>enum</code> is a special “class” that represents a group of <strong>constants</strong> (unchangeable&#x2F;read-only variables).</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">enum</span> Level</span><br><span class="line">  &#123;</span><br><span class="line">    Low,</span><br><span class="line">    Medium,</span><br><span class="line">    High</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">  &#123;</span><br><span class="line">    Level myVar = Level.Medium;</span><br><span class="line">    Console.WriteLine(myVar);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>By default, the first item of an enum has the value 0. The second has the value 1, and so on.</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">enum</span> Months</span><br><span class="line">&#123;</span><br><span class="line">  January,    <span class="comment">// 0</span></span><br><span class="line">  February,   <span class="comment">// 1</span></span><br><span class="line">  March,      <span class="comment">// 2</span></span><br><span class="line">  April,      <span class="comment">// 3</span></span><br><span class="line">  May,        <span class="comment">// 4</span></span><br><span class="line">  June,       <span class="comment">// 5</span></span><br><span class="line">  July        <span class="comment">// 6</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">int</span> myNum = (<span class="built_in">int</span>) Months.April;</span><br><span class="line">  Console.WriteLine(myNum);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>You can also assign your own enum values, and the next items will update their numbers accordingly:</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">enum</span> Months</span><br><span class="line">&#123;</span><br><span class="line">  January,    <span class="comment">// 0</span></span><br><span class="line">  February,   <span class="comment">// 1</span></span><br><span class="line">  March=<span class="number">6</span>,    <span class="comment">// 6</span></span><br><span class="line">  April,      <span class="comment">// 7</span></span><br><span class="line">  May,        <span class="comment">// 8</span></span><br><span class="line">  June,       <span class="comment">// 9</span></span><br><span class="line">  July        <span class="comment">// 10</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">int</span> myNum = (<span class="built_in">int</span>) Months.April;</span><br><span class="line">  Console.WriteLine(myNum); <span class="comment">// ==&gt; 7</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Enum in a Switch Statement:</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">enum</span> Level </span><br><span class="line">&#123;</span><br><span class="line">  Low,</span><br><span class="line">  Medium,</span><br><span class="line">  High</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span> </span><br><span class="line">&#123;</span><br><span class="line">  Level myVar = Level.Medium;</span><br><span class="line">  <span class="keyword">switch</span>(myVar) </span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">case</span> Level.Low:</span><br><span class="line">      Console.WriteLine(<span class="string">&quot;Low level&quot;</span>);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> Level.Medium:</span><br><span class="line">       Console.WriteLine(<span class="string">&quot;Medium level&quot;</span>);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> Level.High:</span><br><span class="line">      Console.WriteLine(<span class="string">&quot;High level&quot;</span>);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><u>Why And When To Use Enums?</u></strong></p>
+<p>Use enums when you have values that you know aren’t going to change, like month days, days, colors, deck of cards, etc.</p>
+<h2 id="Files"><a href="#Files" class="headerlink" title="Files"></a>Files</h2><p>The <code>File</code> class from the <code>System.IO</code> namespace, allows us to work with files.</p>
+<p>The <code>File</code> class has many useful methods for creating and getting information about files. For example:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>AppendText()</code></td>
+<td align="left">Appends text at the end of an existing file</td>
+</tr>
+<tr>
+<td align="left"><code>Copy()</code></td>
+<td align="left">Copies a file</td>
+</tr>
+<tr>
+<td align="left"><code>Create()</code></td>
+<td align="left">Creates or overwrites a file</td>
+</tr>
+<tr>
+<td align="left"><code>Delete()</code></td>
+<td align="left">Deletes a file</td>
+</tr>
+<tr>
+<td align="left"><code>Exists()</code></td>
+<td align="left">Tests whether the file exists</td>
+</tr>
+<tr>
+<td align="left"><code>ReadAllText()</code></td>
+<td align="left">Reads the contents of a file</td>
+</tr>
+<tr>
+<td align="left"><code>Replace()</code></td>
+<td align="left">Replaces the contents of a file with the contents of another file</td>
+</tr>
+<tr>
+<td align="left"><code>WriteAllText()</code></td>
+<td align="left">Creates a new file and writes the contents to it. If the file already exists, it will be overwritten.</td>
+</tr>
+</tbody></table>
+<h2 id="Exceptions-Try-Catch"><a href="#Exceptions-Try-Catch" class="headerlink" title="Exceptions - Try..Catch"></a>Exceptions - Try..Catch</h2><p>The <code>try</code> statement allows you to define a block of code to be tested for errors while it is being executed.</p>
+<p>The <code>catch</code> statement allows you to define a block of code to be executed, if an error occurs in the try block.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">int</span>[] myNumbers = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line">  Console.WriteLine(myNumbers[<span class="number">10</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span> (Exception e)</span><br><span class="line">&#123;</span><br><span class="line">  Console.WriteLine(e.Message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The output will be:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Index was outside the bounds of the array.</span><br></pre></td></tr></table></figure>
+
+<p>The <code>finally</code> statement lets you execute code, after <code>try...catch</code>, regardless of the result:</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">int</span>[] myNumbers = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line">  Console.WriteLine(myNumbers[<span class="number">10</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span> (Exception e)</span><br><span class="line">&#123;</span><br><span class="line">  Console.WriteLine(<span class="string">&quot;Something went wrong.&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">finally</span></span><br><span class="line">&#123;</span><br><span class="line">  Console.WriteLine(<span class="string">&quot;The &#x27;try catch&#x27; is finished.&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The output will be:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Something went wrong.The &#x27;try catch&#x27; is finished.</span><br></pre></td></tr></table></figure>
+
+<p>The <code>throw</code> statement allows you to create a custom error.</p>
+<p>The <code>throw</code> statement is used together with an <strong>exception class</strong>. There are many exception classes available in C#: <code>ArithmeticException</code>, <code>FileNotFoundException</code>, <code>IndexOutOfRangeException</code>, <code>TimeOutException</code>, etc:</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">checkAge</span>(<span class="params"><span class="built_in">int</span> age</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">if</span> (age &lt; <span class="number">18</span>)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> ArithmeticException(<span class="string">&quot;Access denied - You must be at least 18 years old.&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">  &#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;Access granted - You are old enough!&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  checkAge(<span class="number">15</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/programming/" rel="tag"># programming</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/02/10/blog/%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%AF%B9%E4%BA%8E%E8%87%AA%E5%BB%BA%E7%BD%91%E7%AB%99%EF%BC%88%E5%8D%9A%E5%AE%A2%EF%BC%89%E7%9A%84%E6%94%B6%E5%BD%95/" rel="prev" title="添加搜索引擎对于自建网站（博客）的收录">
+                  <i class="fa fa-angle-left"></i> 添加搜索引擎对于自建网站（博客）的收录
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/07/23/tools/Git-notes/" rel="next" title="Git notes">
+                  Git notes <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">ciel</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
