@@ -198,7 +198,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2025-05-10 22:43:51 / Modified: 23:02:00" itemprop="dateCreated datePublished" datetime="2025-05-10T22:43:51+08:00">2025-05-10</time>
+      <time title="Created: 2025-05-10 22:43:51 / Modified: 23:06:41" itemprop="dateCreated datePublished" datetime="2025-05-10T22:43:51+08:00">2025-05-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -231,8 +231,8 @@
 <li>如果请求被托管规则拦截，可以从拦截日志中找到匹配的正则表达式，或者从coreruleset官方找到对应的正则表达式（注意对应的规则版本）；</li>
 <li>通过在线工具，比如<a href="https://nam06.safelinks.protection.outlook.com/?url=https://regex101.com/&data=05%7C02%7Cxiaohanyuan@microsoft.com%7C7c4ad2df20984ca498f808dd1b50eca1%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638696756601795187%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ==%7C0%7C%7C%7C&sdata=q7xZvknod5sACFrDAB+kzmkrptQWFDM8yDoLyN3SAgk=&reserved=0">regex101: build, test, and debug regex</a>，可以进一步判断匹配情况。</li>
 </ul>
-<p>举例如下匹配情况:<br>{“message”:”Pattern match (?i:\s’&quot;()]<em>?\b([\d\w]+)[\b[\s’&quot;()?(?:&lt;(?:&#x3D;(?:\s’&quot;()]*?(?!\b\1\b)[\d\w]+|&gt;[\s’&quot;()?(?:\b\1\b))|&gt;?\s’&quot;()]</em>?(?!\b\1\b)[\d\w]+)|(?:not\s+(?:regexp|like)|is\s+not|&gt;&#x3D;?|!&#x3D;|\^)[\s’&quot;()?(?!\b\1\b)\d\w+|(?:(?:sounds\s+)?like|r(?:egexp|like)|&#x3D;)\s’&quot;()]<em>?(?:\b\1\b))](file:&#x2F;&#x2F;b[&#x2F;s’&#x2F;%22%60()%5d</em>%3f(%3f:%3c(%3f:&#x3D;(%3f:%5b&#x2F;s’&#x2F;%22%60()%5d*%3f(%3f!&#x2F;b&#x2F;1&#x2F;b)%5b&#x2F;d&#x2F;w%5d+|%3e%5b&#x2F;s’&#x2F;%22%60()%5d*%3f(%3f:&#x2F;b&#x2F;1&#x2F;b))|%3e%3f%5b&#x2F;s’&#x2F;%22%60()%5d*%3f(%3f!&#x2F;b&#x2F;1&#x2F;b)%5b&#x2F;d&#x2F;w%5d+)|(%3f:not&#x2F;s+(%3f:regexp|like)|is&#x2F;s+not|%3e&#x3D;%3f|!&#x3D;|&#x2F;%5e)%5b&#x2F;s’&#x2F;%22%60()%5d*%3f(%3f!&#x2F;b&#x2F;1&#x2F;b)%5b&#x2F;d&#x2F;w%5d+|(%3f:(%3f:sounds&#x2F;s+)%3flike|r(%3f:egexp|like)|&#x3D;)%5b&#x2F;s’&#x2F;%22%60()%5d*%3f(%3f:&#x2F;b&#x2F;1&#x2F;b)))) at &#x3D;&#x3D;ARGS&#x3D;&#x3D;.”,”data”:”{ &#x3D;&#x3D;pro&lt;iPhone16&#x3D;&#x3D; found within ARGS:&#x3D;&#x3D;device&#x3D;&#x3D;:iPhone iPhone 15 pro&lt;iPhone16,1&gt;}”,”file”:”REQUEST-942-APPLICATION-ATTACK-SQLI.conf”,”line”:”585”}</p>
-<p>![[Pasted image 20250510230158.png]]</p>
+<p>举例如下匹配情况:<br>![[Pasted image 20250510230545.png]]</p>
+<p>![[Analyze-and-Fix-Azure-WAF-False-Positive-Blocks&#x2F;Pasted image 20250510230158.png]]</p>
 <blockquote>
 <p>注：&#x3D;&#x3D;ARGS&#x3D;&#x3D;表示是key:vlue pair里的value的内容匹配上了；如果看到&#x3D;&#x3D;ARGS_NAMES&#x3D;&#x3D;，则表示是key:vlue pair里的key的名称匹配上了。&#x3D;&#x3D;REQUEST_COOKIES&#x3D;&#x3D;则代表cokkie的内容匹配上了。</p>
 </blockquote>
@@ -527,7 +527,7 @@
 </blockquote>
 <h2 id="第三方平台使用"><a href="#第三方平台使用" class="headerlink" title="第三方平台使用"></a>第三方平台使用</h2><h3 id="添加SSH-Key到远端服务器"><a href="#添加SSH-Key到远端服务器" class="headerlink" title="添加SSH Key到远端服务器"></a>添加SSH Key到远端服务器</h3><ol>
 <li>打开terminal，输入命令<code>ls -al ~/.ssh</code>，检查是否显示有id_rsa.pub或者id_dsa.pub存在，如果存在请直接跳至第3步。</li>
-<li>在bash中输入ssh-keygen -t rsa -C ”<a href="mailto:&#x79;&#x6f;&#117;&#114;&#x45;&#x6d;&#97;&#x69;&#x6c;&#64;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#x65;&#x2e;&#x63;&#x6f;&#109;">yourEmail@example.com</a>”</li>
+<li>在bash中输入ssh-keygen -t rsa -C ”<a href="mailto:&#x79;&#x6f;&#117;&#x72;&#69;&#109;&#x61;&#105;&#108;&#x40;&#x65;&#120;&#97;&#109;&#x70;&#108;&#x65;&#x2e;&#x63;&#x6f;&#109;">yourEmail@example.com</a>”</li>
 <li>打开id_rsa.pub文件，并且复制全部内容</li>
 <li>打开第三方平台账户，添加SSH Keys</li>
 </ol>
