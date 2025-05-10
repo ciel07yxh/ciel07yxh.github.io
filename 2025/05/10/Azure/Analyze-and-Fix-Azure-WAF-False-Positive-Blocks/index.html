@@ -26,14 +26,17 @@
 <meta property="og:site_name" content="Ciel&#39;s blog">
 <meta property="og:description" content="关于WAF 拦截排查的官方指导doc请见： Troubleshoot - Azure Web Application Firewall | Microsoft Learn 查找LogA日志LogA sample 可参考： Examining logs using Azure Log Analytics - Azure Application Gateway | Microsoft Learn  可">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://blog.ciel07yxh.top/2025/05/10/Azure/Analyze-and-Fix-Azure-WAF-False-Positive-Blocks/Pasted%20image%2020250510230545.png">
+<meta property="og:image" content="http://blog.ciel07yxh.top/2025/05/10/Azure/Analyze-and-Fix-Azure-WAF-False-Positive-Blocks/Pasted%20image%2020250510230158.png">
 <meta property="article:published_time" content="2025-05-10T14:43:51.000Z">
-<meta property="article:modified_time" content="2025-05-10T15:06:41.918Z">
+<meta property="article:modified_time" content="2025-05-10T15:16:11.700Z">
 <meta property="article:author" content="ciel">
 <meta property="article:tag" content="Azure">
 <meta property="article:tag" content="Troubleshooting">
 <meta property="article:tag" content="WAF">
 <meta property="article:tag" content="OWASP">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.ciel07yxh.top/2025/05/10/Azure/Analyze-and-Fix-Azure-WAF-False-Positive-Blocks/Pasted%20image%2020250510230545.png">
 
 
 <link rel="canonical" href="http://blog.ciel07yxh.top/2025/05/10/Azure/Analyze-and-Fix-Azure-WAF-False-Positive-Blocks/">
@@ -206,7 +209,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2025-05-10 22:43:51 / Modified: 23:06:41" itemprop="dateCreated datePublished" datetime="2025-05-10T22:43:51+08:00">2025-05-10</time>
+      <time title="Created: 2025-05-10 22:43:51 / Modified: 23:16:11" itemprop="dateCreated datePublished" datetime="2025-05-10T22:43:51+08:00">2025-05-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -238,8 +241,8 @@
 <li>如果请求被托管规则拦截，可以从拦截日志中找到匹配的正则表达式，或者从coreruleset官方找到对应的正则表达式（注意对应的规则版本）；</li>
 <li>通过在线工具，比如<a href="https://nam06.safelinks.protection.outlook.com/?url=https://regex101.com/&data=05%7C02%7Cxiaohanyuan@microsoft.com%7C7c4ad2df20984ca498f808dd1b50eca1%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638696756601795187%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ==%7C0%7C%7C%7C&sdata=q7xZvknod5sACFrDAB+kzmkrptQWFDM8yDoLyN3SAgk=&reserved=0">regex101: build, test, and debug regex</a>，可以进一步判断匹配情况。</li>
 </ul>
-<p>举例如下匹配情况:<br>![[Pasted image 20250510230545.png]]</p>
-<p>![[Analyze-and-Fix-Azure-WAF-False-Positive-Blocks&#x2F;Pasted image 20250510230158.png]]</p>
+<p>举例如下匹配情况:<br><img src="/2025/05/10/Azure/Analyze-and-Fix-Azure-WAF-False-Positive-Blocks/Pasted%20image%2020250510230545.png"></p>
+<p><img src="/2025/05/10/Azure/Analyze-and-Fix-Azure-WAF-False-Positive-Blocks/Pasted%20image%2020250510230158.png"></p>
 <blockquote>
 <p>注：&#x3D;&#x3D;ARGS&#x3D;&#x3D;表示是key:vlue pair里的value的内容匹配上了；如果看到&#x3D;&#x3D;ARGS_NAMES&#x3D;&#x3D;，则表示是key:vlue pair里的key的名称匹配上了。&#x3D;&#x3D;REQUEST_COOKIES&#x3D;&#x3D;则代表cokkie的内容匹配上了。</p>
 </blockquote>
